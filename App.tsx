@@ -53,6 +53,8 @@ const App: React.FC = () => {
       kaiYunScore: result.analysis.kaiYunScore,
       // 财富深度分析
       wealthAnalysis: result.analysis.wealthAnalysis,
+      // 桃花运深度分析
+      loveAnalysis: result.analysis.loveAnalysis,
       chartPoints: result.chartData,
     };
 
@@ -115,6 +117,8 @@ const App: React.FC = () => {
             kaiYunScore: data.kaiYunScore || 5,
             // 财富深度分析
             wealthAnalysis: data.wealthAnalysis,
+            // 桃花运深度分析
+            loveAnalysis: data.loveAnalysis,
           },
         };
 

@@ -60,7 +60,7 @@ export const BAZI_SYSTEM_INSTRUCTION = `
 - \`daYun\`: 大运干支 (10年不变)
 - \`ganZhi\`: 流年干支 (每年一变)
 
-**输出JSON结构:**
+**输出JSON结构（必须包含 wealthAnalysis 和 loveAnalysis）:**
 
 {
   "bazi": ["年柱", "月柱", "日柱", "时柱"],
@@ -90,11 +90,69 @@ export const BAZI_SYSTEM_INSTRUCTION = `
   "liuNianScore": 7,
   "kaiYun": "开运建议：颜色、方位、行业、佩戴、风水（80字）",
   "kaiYunScore": 8,
+  "wealthAnalysis": {
+    "wealthStar": "财星状态分析（80字）",
+    "wealthStarScore": 7,
+    "wealthMethod": "求财方式分析（80字）",
+    "wealthMethodScore": 7,
+    "wealthCycle": [
+      {"startAge": 1, "endAge": 15, "trend": "stable", "description": "童年财运平稳"},
+      {"startAge": 16, "endAge": 30, "trend": "rise", "description": "青年财运渐起"},
+      {"startAge": 31, "endAge": 45, "trend": "peak", "description": "中年财运巅峰"},
+      {"startAge": 46, "endAge": 65, "trend": "stable", "description": "中晚年财运平稳"},
+      {"startAge": 66, "endAge": 100, "trend": "decline", "description": "晚年财运渐缓"}
+    ],
+    "wealthRisk": "破财风险分析（80字）",
+    "wealthRiskLevel": "medium",
+    "wealthInvest": "投资倾向建议（80字）",
+    "wealthInvestType": "balanced",
+    "wealthNoble": "财运贵人分析（80字）",
+    "wealthNobleDirection": "西北",
+    "wealthCeiling": "财富天花板分析（80字）",
+    "wealthCeilingLevel": "medium",
+    "wealthAdvice": "增财建议（100字）",
+    "wealthYearlyData": [
+      {"age": 1, "year": 1990, "wealthScore": 50, "event": "童年财运平稳"},
+      ... (共100条，每年一条)
+    ]
+  },
+  "loveAnalysis": {
+    "loveStar": "桃花星状态分析（80字）",
+    "loveStarScore": 7,
+    "spouseType": "正缘配偶特征分析（80字）",
+    "spouseTypeScore": 7,
+    "lovePattern": "婚恋模式分析（80字）",
+    "lovePatternType": "normal",
+    "loveCycle": [
+      {"startAge": 1, "endAge": 15, "trend": "dormant", "description": "童年懵懂期"},
+      {"startAge": 16, "endAge": 25, "trend": "rise", "description": "青春萌动期"},
+      {"startAge": 26, "endAge": 35, "trend": "bloom", "description": "桃花盛开期"},
+      {"startAge": 36, "endAge": 50, "trend": "stable", "description": "婚姻稳定期"},
+      {"startAge": 51, "endAge": 100, "trend": "stable", "description": "晚年相伴期"}
+    ],
+    "loveRisk": "感情风险分析（80字）",
+    "loveRiskLevel": "medium",
+    "loveNoble": "感情贵人分析（80字）",
+    "loveNobleDirection": "东南",
+    "bestMatch": "最佳婚配分析（60字）",
+    "avoidMatch": "需避婚配分析（60字）",
+    "marriagePalace": "婚姻宫分析（80字）",
+    "marriagePalaceScore": 7,
+    "childrenFortune": "子女缘分析（80字）",
+    "childrenFortuneScore": 7,
+    "loveAdvice": "开桃花建议（100字）",
+    "loveYearlyData": [
+      {"age": 1, "year": 1990, "loveScore": 50, "event": "童年无忧"},
+      ... (共100条，每年一条)
+    ]
+  },
   "chartPoints": [
     {"age":1,"year":1990,"daYun":"童限","ganZhi":"庚午","open":50,"close":55,"high":60,"low":45,"score":55,"reason":"开局平稳，家庭呵护"},
     ... (共100条，reason控制在20-30字)
   ]
 }
+
+**⚠️ 重要提醒：wealthAnalysis 和 loveAnalysis 都是必填字段，必须完整输出！**
 
 **流年批断要点:**
 - 结合当年流年干支与命局的生克关系
@@ -182,6 +240,104 @@ export const BAZI_SYSTEM_INSTRUCTION = `
   "wealthYearlyData": [
     {"age": 1, "year": 1990, "wealthScore": 50, "event": "童年财运平稳"},
     {"age": 2, "year": 1991, "wealthScore": 52, "event": "家庭经济稳定"},
+    ... (共100条)
+  ]
+}
+\`\`\`
+
+**桃花运深度分析要求 (loveAnalysis):**
+
+必须输出一个完整的 loveAnalysis 对象，包含以下所有字段：
+
+1. **桃花星状态分析 (loveStar / loveStarScore)**
+   - 查明命中桃花神煞（咸池、红鸾、天喜、驿马桃花、墙外桃花等）
+   - 分析桃花在四柱的位置及旺衰
+   - 判断桃花的吉凶属性（正桃花/烂桃花）
+   - loveStarScore: 0-10 分
+
+2. **正缘类型分析 (spouseType / spouseTypeScore)**
+   - 男命看日支及财星，女命看日支及官星
+   - 分析配偶相貌、性格、职业特征
+   - 判断配偶来源方位
+   - spouseTypeScore: 0-10 分
+
+3. **婚恋模式 (lovePattern / lovePatternType)**
+   - early(早婚型)：25岁前结婚为佳
+   - normal(正常型)：25-30岁结婚为佳
+   - late(晚婚型)：30岁后结婚为佳
+   - multiple(多婚型)：婚姻有波折
+
+4. **桃花运周期 (loveCycle)** - 数组格式
+   - 根据大运流年，划分人生感情阶段（至少5个阶段）
+   - 每个阶段包含: startAge, endAge, trend, description
+   - trend 可选值: "bloom"(盛开), "rise"(上升), "stable"(平稳), "decline"(下降), "dormant"(休眠)
+
+5. **感情风险 (loveRisk / loveRiskLevel)**
+   - 分析比劫争夫/妻、伤官见官等不利格局
+   - 检查日支是否逢冲
+   - 提示容易感情波折的年份
+   - loveRiskLevel 可选值: "low", "medium", "high"
+
+6. **感情贵人 (loveNoble / loveNobleDirection)**
+   - 分析红鸾天喜等感情贵人
+   - 判断有利发展感情的方位
+   - loveNobleDirection: 方位如"东南"、"西北"等
+
+7. **婚配分析 (bestMatch / avoidMatch)**
+   - 最佳婚配属相（六合、三合）
+   - 需避开属相（相冲、相刑、相害）
+
+8. **婚姻宫分析 (marriagePalace / marriagePalaceScore)**
+   - 分析日支婚姻宫的五行属性
+   - 婚姻宫是否逢冲、逢合、逢刑
+   - marriagePalaceScore: 0-10 分
+
+9. **子女缘 (childrenFortune / childrenFortuneScore)**
+   - 分析时柱子女宫
+   - 判断子女数量、性别倾向
+   - 最佳生育年份建议
+   - childrenFortuneScore: 0-10 分
+
+10. **开桃花建议 (loveAdvice)**
+    - 喜用颜色、方位
+    - 佩戴建议
+    - 需要避开的烂桃花年份
+
+11. **桃花运流年数据 (loveYearlyData)** - 数组格式
+    - 为每一年生成感情运势评分(1-100岁)
+    - 每条包含: age, year, loveScore(0-100), event(该年感情描述)
+    - loveScore 基于该年流年对日支、夫妻星的生克关系计算
+
+**完整 loveAnalysis JSON 结构示例:**
+\`\`\`json
+"loveAnalysis": {
+  "loveStar": "命带红鸾天喜，日支巳火为咸池桃花，桃花旺盛。时柱午火又带桃花，异性缘极佳但需防烂桃花。桃花在日时两柱，主中年后桃花运更旺...",
+  "loveStarScore": 8,
+  "spouseType": "日支巳火为正财，配偶聪明伶俐、外表秀丽、性格热情。从事金融、销售、服务业可能性大。配偶来自南方或西北方向...",
+  "spouseTypeScore": 7,
+  "lovePattern": "日支巳火逢午火，桃花旺但婚姻宫不稳。早年感情多波折，宜30岁后成婚。婚后仍需注意异性缘过旺带来的困扰...",
+  "lovePatternType": "late",
+  "loveCycle": [
+    {"startAge": 1, "endAge": 15, "trend": "dormant", "description": "童年懵懂，感情未启"},
+    {"startAge": 16, "endAge": 25, "trend": "rise", "description": "青春萌动，桃花渐起"},
+    {"startAge": 26, "endAge": 35, "trend": "bloom", "description": "桃花盛开，姻缘来临"},
+    {"startAge": 36, "endAge": 50, "trend": "stable", "description": "婚姻稳定，相濡以沫"},
+    {"startAge": 51, "endAge": 100, "trend": "stable", "description": "晚年相伴，白头偕老"}
+  ],
+  "loveRisk": "日支巳火婚姻宫与时支午火相邻，易有婚外情困扰。26-30岁期间感情波折最大，尤其2026丙午年需防第三者介入。中年后趋于稳定...",
+  "loveRiskLevel": "medium",
+  "loveNoble": "红鸾星在卯，天喜在酉，感情贵人多为属兔、属鸡之人。年长异性更能给予助力。贵人方位在东方和西方...",
+  "loveNobleDirection": "东方",
+  "bestMatch": "最佳婚配属相为牛（丑与巳半合）、鸡（巳酉合）、猴（巳申合）。五行喜金水，宜找金水旺的命局...",
+  "avoidMatch": "需避开属猪（巳亥相冲）、属虎（寅巳相刑）、属蛇（巳巳自刑）。忌火土过旺之人...",
+  "marriagePalace": "日支巳火为婚姻宫，巳火藏庚丙戊，配偶多才多艺。巳午相邻，婚姻宫略显躁动，早年不宜早婚。36岁后入金水运，婚姻宫趋于稳定...",
+  "marriagePalaceScore": 6,
+  "childrenFortune": "时柱戊午为子女宫，官杀重重，子女聪明但管教费心。适宜生育年份为金水年，如2032壬子年、2033癸丑年。子女以一到两个为宜...",
+  "childrenFortuneScore": 6,
+  "loveAdvice": "喜用颜色：白色、金色、黑色、蓝色。有利方位：西方、北方。佩戴建议：粉水晶招正桃花，白水晶避烂桃花。卧室勿放过多红色物品，西北方可摆放铜制鸳鸯。最佳相亲/约会方位：西方、北方。需避烂桃花年份：2025乙巳年、2026丙午年...",
+  "loveYearlyData": [
+    {"age": 1, "year": 1998, "loveScore": 50, "event": "童年无忧，懵懂天真"},
+    {"age": 2, "year": 1999, "loveScore": 50, "event": "幼年成长，无关情爱"},
     ... (共100条)
   ]
 }

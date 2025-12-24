@@ -78,6 +78,9 @@ export interface AnalysisData {
 
   // 财富深度分析（可选，新增模块）
   wealthAnalysis?: WealthAnalysis;
+
+  // 桃花运深度分析（可选，新增模块）
+  loveAnalysis?: LoveAnalysis;
 }
 
 // 财运周期
@@ -135,4 +138,66 @@ export interface WealthAnalysis {
 export interface LifeDestinyResult {
   chartData: KLinePoint[];
   analysis: AnalysisData;
+}
+
+// ========== 桃花运深度分析相关类型 ==========
+
+// 桃花运周期
+export interface LoveCyclePeriod {
+  startAge: number;
+  endAge: number;
+  trend: 'bloom' | 'rise' | 'stable' | 'decline' | 'dormant';  // 盛开/上升/平稳/下降/休眠
+  description: string;
+}
+
+// 桃花运流年数据点
+export interface LoveYearlyPoint {
+  age: number;
+  year: number;
+  loveScore: number;      // 0-100 桃花运评分
+  event: string;          // 该年感情事件/趋势
+}
+
+// 桃花运深度分析接口
+export interface LoveAnalysis {
+  // 桃花星状态
+  loveStar: string;               // 桃花星（咸池、红鸾、天喜等）分析
+  loveStarScore: number;          // 0-10
+  
+  // 正缘类型（配偶特征）
+  spouseType: string;             // 配偶的性格、外貌、职业特征
+  spouseTypeScore: number;        // 0-10
+  
+  // 婚恋模式
+  lovePattern: string;            // 恋爱婚姻模式（早婚/晚婚/多婚等）
+  lovePatternType: 'early' | 'normal' | 'late' | 'multiple';  // 早婚/正常/晚婚/多婚
+  
+  // 桃花运周期
+  loveCycle: LoveCyclePeriod[];   // 桃花运高峰/低谷期
+  
+  // 感情风险
+  loveRisk: string;               // 烂桃花、婚姻危机分析
+  loveRiskLevel: 'low' | 'medium' | 'high';  // 风险等级
+  
+  // 感情贵人
+  loveNoble: string;              // 感情贵人分析
+  loveNobleDirection: string;     // 贵人方位
+  
+  // 最佳婚配
+  bestMatch: string;              // 最佳婚配属相、五行
+  avoidMatch: string;             // 需避开的属相、五行
+  
+  // 婚姻宫分析
+  marriagePalace: string;         // 日支婚姻宫分析
+  marriagePalaceScore: number;    // 0-10
+  
+  // 子女缘
+  childrenFortune: string;        // 子女缘分析
+  childrenFortuneScore: number;   // 0-10
+  
+  // 开桃花建议
+  loveAdvice: string;             // 增桃花与避烂桃花建议
+  
+  // 桃花运流年数据
+  loveYearlyData: LoveYearlyPoint[];
 }

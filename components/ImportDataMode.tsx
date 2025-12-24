@@ -213,6 +213,8 @@ const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
                     liuNianScore: data.liuNianScore || 5,
                     kaiYun: data.kaiYun || "开运建议待生成",
                     kaiYunScore: data.kaiYunScore || 5,
+                    // 财富深度分析（如果 AI 返回了此字段）
+                    wealthAnalysis: data.wealthAnalysis,
                 },
             };
 

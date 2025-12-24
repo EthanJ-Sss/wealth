@@ -3,6 +3,7 @@ import React from 'react';
 import { AnalysisData } from '../types';
 import { ScrollText, Briefcase, Coins, Heart, Activity, Users, Star, Info, Brain, Compass, Layers, Target, Sparkles, TrendingUp, Lightbulb } from 'lucide-react';
 import WealthAnalysisPanel from './WealthAnalysisPanel';
+import LoveAnalysisPanel from './LoveAnalysisPanel';
 
 interface AnalysisResultProps {
   analysis: AnalysisData;
@@ -270,6 +271,11 @@ const AnalysisResult: React.FC<AnalysisResultProps> = ({ analysis }) => {
       {/* 财富深度分析模块 */}
       {analysis.wealthAnalysis && (
         <WealthAnalysisPanel wealthAnalysis={analysis.wealthAnalysis} />
+      )}
+
+      {/* 桃花运深度分析模块 */}
+      {analysis.loveAnalysis && (
+        <LoveAnalysisPanel loveAnalysis={analysis.loveAnalysis} />
       )}
     </div>
   );

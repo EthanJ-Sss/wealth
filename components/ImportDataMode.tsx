@@ -124,11 +124,15 @@ const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
 
 任务：
 1. 确认格局与喜忌，判断日主强弱。
-2. 生成 **1-100 岁 (虚岁)** 的人生流年K线数据。
+2. 生成 **1-100 岁 (虚岁)** 的人生流年K线数据（chartPoints）。
 3. 在 \`reason\` 字段中提供流年详批。
 4. 生成带评分的命理分析报告（包含格局分析、用神忌神、神煞解读、开运建议等）。
+5. **【必须】生成完整的 wealthAnalysis 财富深度分析**（包含财星分析、财运周期、wealthYearlyData 等全部字段）。
+6. **【必须】生成完整的 loveAnalysis 桃花运深度分析**（包含桃花星分析、婚恋模式、loveYearlyData 等全部字段）。
 
-请严格按照系统指令生成 JSON 数据。务必只返回纯JSON格式数据，不要包含任何markdown代码块标记或其他文字说明。`;
+⚠️ 重要：wealthAnalysis 和 loveAnalysis 是必填模块，缺少任何一个都会导致功能异常！
+
+请严格按照系统指令的 JSON 结构生成数据。务必只返回纯JSON格式数据，不要包含任何markdown代码块标记或其他文字说明。`;
     };
 
     // 复制完整提示词（兼容 HTTP 环境）

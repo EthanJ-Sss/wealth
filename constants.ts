@@ -152,7 +152,11 @@ export const BAZI_SYSTEM_INSTRUCTION = `
   ]
 }
 
-**⚠️ 重要提醒：wealthAnalysis 和 loveAnalysis 都是必填字段，必须完整输出！**
+**⚠️⚠️⚠️ 极其重要 - 必须遵守：**
+1. **wealthAnalysis 必须输出** - 包含全部字段（wealthStar、wealthMethod、wealthCycle、wealthRisk、wealthInvest、wealthNoble、wealthCeiling、wealthAdvice、wealthYearlyData）
+2. **loveAnalysis 必须输出** - 包含全部字段（loveStar、spouseType、lovePattern、loveCycle、loveRisk、loveNoble、bestMatch、avoidMatch、marriagePalace、childrenFortune、loveAdvice、loveYearlyData）
+3. **缺少任何一个模块都是严重错误！**
+4. **每个模块的 YearlyData 必须生成 100 条数据（1-100岁）！**
 
 **流年批断要点:**
 - 结合当年流年干支与命局的生克关系

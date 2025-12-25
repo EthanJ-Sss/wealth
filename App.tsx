@@ -3,7 +3,8 @@ import React, { useState, useMemo } from 'react';
 import LifeKLineChart from './components/LifeKLineChart';
 import AnalysisResult from './components/AnalysisResult';
 import ImportDataMode from './components/ImportDataMode';
-import { LifeDestinyResult } from './types';
+import DeepAnalysisPanel from './components/DeepAnalysisPanel';
+import { LifeDestinyResult, WealthAnalysis, LoveAnalysis } from './types';
 import { Sparkles, AlertCircle, Download, Printer, Trophy, FileDown, FileUp } from 'lucide-react';
 
 const App: React.FC = () => {
@@ -17,6 +18,38 @@ const App: React.FC = () => {
     setUserName('');
     setError(null);
   };
+
+  // 更新财富深度分析数据
+  const handleWealthAnalysisUpdate = (wealthAnalysis: WealthAnalysis) => {
+    if (!result) return;
+    setResult({
+      ...result,
+      analysis: {
+        ...result.analysis,
+        wealthAnalysis,
+      },
+    });
+  };
+
+  // 更新姻缘深度分析数据
+  const handleLoveAnalysisUpdate = (loveAnalysis: LoveAnalysis) => {
+    if (!result) return;
+    setResult({
+      ...result,
+      analysis: {
+        ...result.analysis,
+        loveAnalysis,
+      },
+    });
+  };
+
+  // 从 chartData 获取出生年份
+  const birthYear = useMemo(() => {
+    if (!result || !result.chartData || result.chartData.length === 0) return new Date().getFullYear();
+    // 第一条数据的 year 减去 age 再加 1 就是出生年份
+    const firstPoint = result.chartData[0];
+    return firstPoint.year - firstPoint.age + 1;
+  }, [result]);
 
   // 导出为 JSON 文件
   const handleExportJson = () => {
@@ -419,6 +452,16 @@ const App: React.FC = () => {
             {/* Added ID for HTML extraction */}
             <section id="analysis-result-container">
               <AnalysisResult analysis={result.analysis} />
+            </section>
+
+            {/* 深度分析入口（财富、姻缘） */}
+            <section className="no-print">
+              <DeepAnalysisPanel
+                analysis={result.analysis}
+                birthYear={birthYear}
+                onWealthAnalysisUpdate={handleWealthAnalysisUpdate}
+                onLoveAnalysisUpdate={handleLoveAnalysisUpdate}
+              />
             </section>
 
             {/* Print Only: Detailed Table to substitute interactive tooltips */}

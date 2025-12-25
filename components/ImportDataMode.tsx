@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { LifeDestinyResult } from '../types';
-import { Copy, CheckCircle, AlertCircle, Upload, Sparkles, MessageSquare, ArrowRight, Calendar, Edit3 } from 'lucide-react';
+import { Copy, CheckCircle, AlertCircle, Upload, Sparkles, MessageSquare, ArrowRight } from 'lucide-react';
 import { BAZI_SYSTEM_INSTRUCTION } from '../constants';
 import AutoPaipanForm from './AutoPaipanForm';
 import { PaipanResult } from '../services/paipanService';
@@ -12,7 +12,7 @@ interface ImportDataModeProps {
 
 const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
     const [step, setStep] = useState<1 | 2 | 3>(1);
-    const [inputMode, setInputMode] = useState<'auto' | 'manual'>('auto'); // 新增：输入模式
+    const [inputMode, setInputMode] = useState<'auto' | 'manual'>('auto'); // 新增：输入模式切换
     const [baziInfo, setBaziInfo] = useState({
         name: '',
         gender: 'Male',
@@ -28,12 +28,13 @@ const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
     const [copied, setCopied] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
-    // 处理自动排盘结果
+    // 自动排盘结果回调
     const handlePaipanResult = (result: PaipanResult) => {
+        // 可以在这里处理排盘结果的预览
         console.log('排盘结果:', result);
     };
 
-    // 从自动排盘填充表单
+    // 自动填充表单
     const handleFillForm = (data: {
         birthYear: string;
         yearPillar: string;
@@ -123,50 +124,24 @@ const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
 - **ganZhi 字段**：填入该年份的**流年干支**（每年一变，例如 2024=甲辰，2025=乙巳）。
 
 任务：
-1. 确认格局与喜忌，判断日主强弱。
-2. 生成 **1-100 岁 (虚岁)** 的人生流年K线数据（chartPoints）。
+1. 确认格局与喜忌。
+2. 生成 **1-100 岁 (虚岁)** 的人生流年K线数据。
 3. 在 \`reason\` 字段中提供流年详批。
-4. 生成带评分的命理分析报告（包含格局分析、用神忌神、神煞解读、开运建议等）。
-5. **【必须】生成完整的 wealthAnalysis 财富深度分析**（包含财星分析、财运周期、wealthYearlyData 等全部字段）。
-6. **【必须】生成完整的 loveAnalysis 桃花运深度分析**（包含桃花星分析、婚恋模式、loveYearlyData 等全部字段）。
+4. 生成带评分的命理分析报告（包含性格分析、币圈交易分析、发展风水分析）。
 
-⚠️ 重要：wealthAnalysis 和 loveAnalysis 是必填模块，缺少任何一个都会导致功能异常！
-
-请严格按照系统指令的 JSON 结构生成数据。务必只返回纯JSON格式数据，不要包含任何markdown代码块标记或其他文字说明。`;
+请严格按照系统指令生成 JSON 数据。务必只返回纯JSON格式数据，不要包含任何markdown代码块标记或其他文字说明。`;
     };
 
-    // 复制完整提示词（兼容 HTTP 环境）
+    // 复制完整提示词
     const copyFullPrompt = async () => {
         const fullPrompt = `=== 系统指令 (System Prompt) ===\n\n${BAZI_SYSTEM_INSTRUCTION}\n\n=== 用户提示词 (User Prompt) ===\n\n${generateUserPrompt()}`;
 
         try {
-            // 优先使用现代 Clipboard API（仅在 HTTPS 或 localhost 可用）
-            if (navigator.clipboard && window.isSecureContext) {
-                await navigator.clipboard.writeText(fullPrompt);
-            } else {
-                // 降级方案：使用传统的 execCommand
-                const textArea = document.createElement('textarea');
-                textArea.value = fullPrompt;
-                textArea.style.position = 'fixed';
-                textArea.style.left = '-9999px';
-                textArea.style.top = '-9999px';
-                document.body.appendChild(textArea);
-                textArea.focus();
-                textArea.select();
-                
-                const successful = document.execCommand('copy');
-                document.body.removeChild(textArea);
-                
-                if (!successful) {
-                    throw new Error('execCommand copy failed');
-                }
-            }
+            await navigator.clipboard.writeText(fullPrompt);
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
         } catch (err) {
             console.error('复制失败', err);
-            // 最后的降级方案：弹出提示让用户手动复制
-            alert('自动复制失败，请手动选择并复制提示词内容');
         }
     };
 
@@ -239,8 +214,9 @@ const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
                     liuNianScore: data.liuNianScore || 5,
                     kaiYun: data.kaiYun || "开运建议待生成",
                     kaiYunScore: data.kaiYunScore || 5,
-                    // 财富深度分析（如果 AI 返回了此字段）
+                    // 深度分析（可选，用户后续可单独生成）
                     wealthAnalysis: data.wealthAnalysis,
+                    loveAnalysis: data.loveAnalysis,
                 },
             };
 
@@ -283,31 +259,29 @@ const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
                 <div className="space-y-6">
                     <div className="text-center">
                         <h2 className="text-2xl font-bold font-serif-sc text-gray-800 mb-2">第一步：输入八字信息</h2>
-                        <p className="text-gray-500 text-sm">选择自动排盘或手动输入</p>
+                        <p className="text-gray-500 text-sm">选择自动排盘或手动输入四柱与大运信息</p>
                     </div>
 
-                    {/* 输入模式切换选项卡 */}
-                    <div className="flex gap-2 p-1 bg-gray-100 rounded-xl">
+                    {/* 模式切换按钮 */}
+                    <div className="flex gap-2 bg-gray-100 p-1 rounded-xl">
                         <button
                             onClick={() => setInputMode('auto')}
-                            className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg font-bold text-sm transition-all ${
+                            className={`flex-1 py-2.5 px-4 rounded-lg font-medium text-sm transition-all ${
                                 inputMode === 'auto'
-                                    ? 'bg-white text-purple-700 shadow-sm'
+                                    ? 'bg-white shadow-sm text-purple-700'
                                     : 'text-gray-500 hover:text-gray-700'
                             }`}
                         >
-                            <Calendar className="w-4 h-4" />
                             🔮 自动排盘
                         </button>
                         <button
                             onClick={() => setInputMode('manual')}
-                            className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg font-bold text-sm transition-all ${
+                            className={`flex-1 py-2.5 px-4 rounded-lg font-medium text-sm transition-all ${
                                 inputMode === 'manual'
-                                    ? 'bg-white text-indigo-700 shadow-sm'
+                                    ? 'bg-white shadow-sm text-amber-700'
                                     : 'text-gray-500 hover:text-gray-700'
                             }`}
                         >
-                            <Edit3 className="w-4 h-4" />
                             ✏️ 手动输入
                         </button>
                     </div>
@@ -315,14 +289,12 @@ const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
                     {/* 自动排盘模式 */}
                     {inputMode === 'auto' && (
                         <AutoPaipanForm 
-                            onResult={handlePaipanResult} 
+                            onResult={handlePaipanResult}
                             onFillForm={handleFillForm}
                         />
                     )}
 
-                    {/* 手动输入模式 */}
-                    {inputMode === 'manual' && (
-                    <>
+                    {/* 姓名输入（两种模式都显示） */}
                     <div className="grid grid-cols-2 gap-4">
                         <div>
                             <label className="block text-xs font-bold text-gray-600 mb-1">姓名 (可选)</label>
@@ -349,7 +321,7 @@ const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
                         </div>
                     </div>
 
-                    <div className="bg-amber-50 p-4 rounded-xl border border-amber-100">
+                    <div className={`bg-amber-50 p-4 rounded-xl border border-amber-100 ${inputMode === 'auto' ? 'opacity-70' : ''}`}>
                         <div className="flex items-center gap-2 mb-3 text-amber-800 text-sm font-bold">
                             <Sparkles className="w-4 h-4" />
                             <span>四柱干支</span>
@@ -421,18 +393,6 @@ const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
                     >
                         下一步：生成提示词 <ArrowRight className="w-5 h-5" />
                     </button>
-                    </> 
-                    )}
-
-                    {/* 自动排盘模式下的下一步按钮 */}
-                    {inputMode === 'auto' && isStep1Valid && (
-                        <button
-                            onClick={() => setStep(2)}
-                            className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 mt-4"
-                        >
-                            下一步：生成提示词 <ArrowRight className="w-5 h-5" />
-                        </button>
-                    )}
                 </div>
             )}
 
@@ -550,6 +510,7 @@ const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
                             <Sparkles className="w-5 h-5" />
                             生成人生K线
                         </button>
+
                     </div>
                 </div>
             )}
@@ -558,3 +519,4 @@ const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
 };
 
 export default ImportDataMode;
+

@@ -1,41 +1,6 @@
 
-import { UserInput, LifeDestinyResult, Gender, WealthAnalysis } from "../types";
+import { UserInput, LifeDestinyResult, Gender } from "../types";
 import { BAZI_SYSTEM_INSTRUCTION } from "../constants";
-
-// 生成默认的财富分析数据（当 API 未返回时使用）
-const generateDefaultWealthAnalysis = (chartPoints: any[]): WealthAnalysis => {
-  // 从流年数据中提取财运数据
-  const wealthYearlyData = chartPoints?.map((point: any) => ({
-    age: point.age,
-    year: point.year,
-    wealthScore: Math.max(20, Math.min(90, point.score + Math.floor(Math.random() * 20 - 10))),
-    event: point.reason?.substring(0, 15) || "财运平稳"
-  })) || [];
-
-  return {
-    wealthStar: "财星状态待分析，请使用 AI 模型生成完整分析。",
-    wealthStarScore: 5,
-    wealthMethod: "求财方式待分析，请使用 AI 模型生成完整分析。",
-    wealthMethodScore: 5,
-    wealthCycle: [
-      { startAge: 1, endAge: 15, trend: 'stable', description: "童年期" },
-      { startAge: 16, endAge: 30, trend: 'rise', description: "成长期" },
-      { startAge: 31, endAge: 50, trend: 'peak', description: "发展期" },
-      { startAge: 51, endAge: 70, trend: 'stable', description: "稳定期" },
-      { startAge: 71, endAge: 100, trend: 'decline', description: "守成期" }
-    ],
-    wealthRisk: "破财风险待分析。",
-    wealthRiskLevel: 'medium',
-    wealthInvest: "投资建议待分析。",
-    wealthInvestType: 'balanced',
-    wealthNoble: "财运贵人待分析。",
-    wealthNobleDirection: "待定",
-    wealthCeiling: "财富上限待分析。",
-    wealthCeilingLevel: 'medium',
-    wealthAdvice: "开源节流建议待生成。",
-    wealthYearlyData
-  };
-};
 
 // Helper to determine stem polarity
 const getStemPolarity = (pillar: string): 'YANG' | 'YIN' => {
@@ -82,19 +47,10 @@ export const generateLifeAnalysis = async (input: UserInput): Promise<LifeDestin
         healthScore: mockData.healthScore || 5,
         family: mockData.family || "无",
         familyScore: mockData.familyScore || 5,
-        // 专业命理分析字段
-        geJu: mockData.geJu || "格局待分析",
-        geJuScore: mockData.geJuScore || 5,
-        yongShen: mockData.yongShen || "用神待分析",
-        yongShenScore: mockData.yongShenScore || 5,
-        shenSha: mockData.shenSha || "神煞待分析",
-        shenShaScore: mockData.shenShaScore || 5,
-        liuNian: mockData.liuNian || "流年运势待分析",
-        liuNianScore: mockData.liuNianScore || 5,
-        kaiYun: mockData.kaiYun || "开运建议待生成",
-        kaiYunScore: mockData.kaiYunScore || 5,
-        // 财富深度分析
-        wealthAnalysis: mockData.wealthAnalysis || generateDefaultWealthAnalysis(mockData.chartPoints),
+        crypto: mockData.crypto || "暂无交易分析",
+        cryptoScore: mockData.cryptoScore || 5,
+        cryptoYear: mockData.cryptoYear || "待定",
+        cryptoStyle: mockData.cryptoStyle || "现货定投",
       },
     };
   }
@@ -169,10 +125,10 @@ export const generateLifeAnalysis = async (input: UserInput): Promise<LifeDestin
     - **ganZhi 字段**：填入该年份的**流年干支**（每年一变，例如 2024=甲辰，2025=乙巳）。
     
     任务：
-    1. 确认格局与喜忌，判断日主强弱。
+    1. 确认格局与喜忌。
     2. 生成 **1-100 岁 (虚岁)** 的人生流年K线数据。
     3. 在 \`reason\` 字段中提供流年详批。
-    4. 生成带评分的命理分析报告（包含格局分析、用神忌神、神煞解读、开运建议等）。
+    4. 生成带评分的命理分析报告（包含性格分析、币圈交易分析、发展风水分析）。
     
     请严格按照系统指令生成 JSON 数据。
   `;
@@ -251,19 +207,11 @@ export const generateLifeAnalysis = async (input: UserInput): Promise<LifeDestin
         healthScore: data.healthScore || 5,
         family: data.family || "无",
         familyScore: data.familyScore || 5,
-        // 专业命理分析字段
-        geJu: data.geJu || "格局待分析",
-        geJuScore: data.geJuScore || 5,
-        yongShen: data.yongShen || "用神待分析",
-        yongShenScore: data.yongShenScore || 5,
-        shenSha: data.shenSha || "神煞待分析",
-        shenShaScore: data.shenShaScore || 5,
-        liuNian: data.liuNian || "流年运势待分析",
-        liuNianScore: data.liuNianScore || 5,
-        kaiYun: data.kaiYun || "开运建议待生成",
-        kaiYunScore: data.kaiYunScore || 5,
-        // 财富深度分析
-        wealthAnalysis: data.wealthAnalysis || generateDefaultWealthAnalysis(data.chartPoints),
+        // Crypto Fields
+        crypto: data.crypto || "暂无交易分析",
+        cryptoScore: data.cryptoScore || 5,
+        cryptoYear: data.cryptoYear || "待定",
+        cryptoStyle: data.cryptoStyle || "现货定投",
       },
     };
   } catch (error) {

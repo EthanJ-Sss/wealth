@@ -304,3 +304,4 @@ const AutoPaipanForm: React.FC<AutoPaipanFormProps> = ({ onResult, onFillForm })
 
 export default AutoPaipanForm;
 
+

@@ -1,0 +1,2544 @@
+{
+  "bazi": [
+    "丙寅",
+    "庚子",
+    "庚戌",
+    "壬午"
+  ],
+  "summary": "日主庚金生于子月，水冷金寒，需火暖局。年柱丙寅，时柱壬午，火有根气，可调候。月干庚金比肩，日支戌土印星，身偏强。喜用木火，忌金水。整体格局中等偏上，一生运势起伏有致，中年后渐入佳境。",
+  "summaryScore": 7,
+  "personality": "性格坚毅果断，有主见，不轻易妥协。比肩透干，重义气，朋友多但需防小人。印星为用，学习能力强，有文化底蕴。火为调候用神，性格热情开朗，但需防急躁。",
+  "personalityScore": 7,
+  "geJu": "日主庚金，生于子月，金寒水冷。年柱丙火透干，时柱午火为根，形成调候格局。月干庚金比肩，日支戌土印星，身偏强。格局为偏印格，配合调候用神，格局中等偏上。",
+  "geJuScore": 7,
+  "yongShen": "日主庚金身偏强，生于子月水旺之地，需火调候暖局。喜用神为木火，木可生火，火可暖局。忌神为金水，金多比劫争财，水多寒湿。大运走木火运为佳，走金水运需谨慎。",
+  "yongShenScore": 7,
+  "shenSha": "年柱寅木为驿马，主奔波变动。日支戌土为华盖，主孤独清高，有艺术天赋。时柱午火为桃花，主异性缘佳。命中无天乙贵人，需靠自己努力。",
+  "shenShaScore": 6,
+  "industry": "适合从事火属性行业，如能源、餐饮、文化传媒。木属性行业亦可，如教育、出版、设计。不宜从事金水属性行业，如金融、物流、水产。",
+  "industryScore": 7,
+  "fengShui": "喜用方位：南方、东方。居住环境宜温暖明亮，多接触阳光。忌北方、西方。家中可摆放红色、绿色装饰，忌黑色、白色过多。",
+  "fengShuiScore": 8,
+  "wealth": "财星不显，需大运流年引动。比肩透干，易有合伙求财机会，但需防破财。中年后走木火运，财运渐起。宜稳健理财，不宜投机。",
+  "wealthScore": 7,
+  "marriage": "日支戌土为婚姻宫，藏火土，配偶性格稳重。时柱午火桃花，异性缘佳但需防烂桃花。宜晚婚，30岁后成婚为佳。",
+  "marriageScore": 6,
+  "health": "金水偏旺，需防呼吸系统、肾脏疾病。火为调候用神，需注意心脏、血液循环。平时多运动，保持心情愉悦。",
+  "healthScore": 6,
+  "family": "年柱丙寅，父母关系和谐。月柱庚子，兄弟姐妹关系一般，需防口舌。时柱壬午，子女聪明但需耐心教育。",
+  "familyScore": 7,
+  "liuNian": "近十年运势：2024甲辰年，木土相战，需防变动。2025乙巳年，木火相生，运势上升。2026丙午年，火旺调候，运势佳。2027丁未年，火土相生，平稳。2028戊申年，土金相生，需防破财。",
+  "liuNianScore": 7,
+  "kaiYun": "喜用颜色：红色、绿色、紫色。有利方位：南方、东方。适宜行业：文化、教育、餐饮、能源。佩戴建议：红玛瑙、绿松石。风水调理：多接触阳光，家中摆放绿植。",
+  "kaiYunScore": 8,
+  "wealthAnalysis": {
+    "wealthStar": "命局中财星不显，需大运流年引动。日主庚金，财星为木，年支寅木为偏财，但被年干丙火泄气。月支子水，日支戌土，时支午火，财星力量较弱。需大运走木火运才能引动财运。",
+    "wealthStarScore": 6,
+    "wealthMethod": "财星不显，适合通过技术、才华求财。比肩透干，可考虑合伙经营。印星为用，适合文化、教育行业。不宜投机，宜稳健理财。",
+    "wealthMethodScore": 7,
+    "wealthCycle": [
+      {
+        "startAge": 1,
+        "endAge": 10,
+        "trend": "stable",
+        "description": "童年财运平稳，家庭经济稳定"
+      },
+      {
+        "startAge": 11,
+        "endAge": 20,
+        "trend": "rise",
+        "description": "青年财运渐起，学业有成"
+      },
+      {
+        "startAge": 21,
+        "endAge": 35,
+        "trend": "stable",
+        "description": "中年前期财运平稳，需积累"
+      },
+      {
+        "startAge": 36,
+        "endAge": 50,
+        "trend": "peak",
+        "description": "中年财运巅峰，事业有成"
+      },
+      {
+        "startAge": 51,
+        "endAge": 65,
+        "trend": "stable",
+        "description": "中晚年财运平稳，守成为主"
+      },
+      {
+        "startAge": 66,
+        "endAge": 100,
+        "trend": "decline",
+        "description": "晚年财运渐缓，安享晚年"
+      }
+    ],
+    "wealthRisk": "比肩透干，易有破财风险，需防朋友借贷、合伙纠纷。大运走金水运时，破财风险增加。需谨慎投资，不宜投机。",
+    "wealthRiskLevel": "medium",
+    "wealthInvest": "建议以稳健型投资为主，可配置60%固定收益类产品，30%股票基金，10%现金。不宜高风险投资，需分散风险。",
+    "wealthInvestType": "balanced",
+    "wealthNoble": "财运贵人多为年长异性，属相为虎、马、狗者。贵人方位在南方、东方。多与火属性、木属性的人合作。",
+    "wealthNobleDirection": "南方",
+    "wealthCeiling": "格局中财星不显，但大运走木火运时可引动财运。配合调候用神，财富层级可达中产水平。需努力积累，不宜好高骛远。",
+    "wealthCeilingLevel": "medium",
+    "wealthAdvice": "宜从事文化、教育、餐饮、能源类行业。喜用红色、绿色。南方、东方发展有利。需防破财，谨慎投资。多与火属性、木属性的人合作。",
+    "wealthYearlyData": [
+      {
+        "age": 1,
+        "year": 1987,
+        "wealthScore": 61,
+        "event": "财星藏支，财运平稳"
+      },
+      {
+        "age": 2,
+        "year": 1988,
+        "wealthScore": 48,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 3,
+        "year": 1989,
+        "wealthScore": 46,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 4,
+        "year": 1990,
+        "wealthScore": 44,
+        "event": "比劫争财，需防破财"
+      },
+      {
+        "age": 5,
+        "year": 1991,
+        "wealthScore": 44,
+        "event": "比劫争财，需防破财"
+      },
+      {
+        "age": 6,
+        "year": 1992,
+        "wealthScore": 48,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 7,
+        "year": 1993,
+        "wealthScore": 50,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 8,
+        "year": 1994,
+        "wealthScore": 62,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 9,
+        "year": 1995,
+        "wealthScore": 64,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 10,
+        "year": 1996,
+        "wealthScore": 58,
+        "event": "火生土，间接助财"
+      },
+      {
+        "age": 11,
+        "year": 1997,
+        "wealthScore": 58,
+        "event": "火生土，间接助财"
+      },
+      {
+        "age": 12,
+        "year": 1998,
+        "wealthScore": 59,
+        "event": "财星藏支，财运平稳"
+      },
+      {
+        "age": 13,
+        "year": 1999,
+        "wealthScore": 58,
+        "event": "财星藏支，财运平稳"
+      },
+      {
+        "age": 14,
+        "year": 2000,
+        "wealthScore": 40,
+        "event": "比劫争财，需防破财"
+      },
+      {
+        "age": 15,
+        "year": 2001,
+        "wealthScore": 37,
+        "event": "比劫争财，需防破财"
+      },
+      {
+        "age": 16,
+        "year": 2002,
+        "wealthScore": 47,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 17,
+        "year": 2003,
+        "wealthScore": 53,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 18,
+        "year": 2004,
+        "wealthScore": 61,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 19,
+        "year": 2005,
+        "wealthScore": 67,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 20,
+        "year": 2006,
+        "wealthScore": 60,
+        "event": "火生土，间接助财"
+      },
+      {
+        "age": 21,
+        "year": 2007,
+        "wealthScore": 59,
+        "event": "火生土，间接助财"
+      },
+      {
+        "age": 22,
+        "year": 2008,
+        "wealthScore": 44,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 23,
+        "year": 2009,
+        "wealthScore": 49,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 24,
+        "year": 2010,
+        "wealthScore": 61,
+        "event": "财星藏支，财运平稳"
+      },
+      {
+        "age": 25,
+        "year": 2011,
+        "wealthScore": 58,
+        "event": "财星藏支，财运平稳"
+      },
+      {
+        "age": 26,
+        "year": 2012,
+        "wealthScore": 54,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 27,
+        "year": 2013,
+        "wealthScore": 44,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 28,
+        "year": 2014,
+        "wealthScore": 63,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 29,
+        "year": 2015,
+        "wealthScore": 63,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 30,
+        "year": 2016,
+        "wealthScore": 54,
+        "event": "火生土，间接助财"
+      },
+      {
+        "age": 31,
+        "year": 2017,
+        "wealthScore": 57,
+        "event": "火生土，间接助财"
+      },
+      {
+        "age": 32,
+        "year": 2018,
+        "wealthScore": 52,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 33,
+        "year": 2019,
+        "wealthScore": 53,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 34,
+        "year": 2020,
+        "wealthScore": 36,
+        "event": "比劫争财，需防破财"
+      },
+      {
+        "age": 35,
+        "year": 2021,
+        "wealthScore": 37,
+        "event": "比劫争财，需防破财"
+      },
+      {
+        "age": 36,
+        "year": 2022,
+        "wealthScore": 62,
+        "event": "财星藏支，财运平稳"
+      },
+      {
+        "age": 37,
+        "year": 2023,
+        "wealthScore": 62,
+        "event": "财星藏支，财运平稳"
+      },
+      {
+        "age": 38,
+        "year": 2024,
+        "wealthScore": 65,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 39,
+        "year": 2025,
+        "wealthScore": 66,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 40,
+        "year": 2026,
+        "wealthScore": 55,
+        "event": "火生土，间接助财"
+      },
+      {
+        "age": 41,
+        "year": 2027,
+        "wealthScore": 58,
+        "event": "火生土，间接助财"
+      },
+      {
+        "age": 42,
+        "year": 2028,
+        "wealthScore": 43,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 43,
+        "year": 2029,
+        "wealthScore": 45,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 44,
+        "year": 2030,
+        "wealthScore": 41,
+        "event": "比劫争财，需防破财"
+      },
+      {
+        "age": 45,
+        "year": 2031,
+        "wealthScore": 40,
+        "event": "比劫争财，需防破财"
+      },
+      {
+        "age": 46,
+        "year": 2032,
+        "wealthScore": 51,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 47,
+        "year": 2033,
+        "wealthScore": 51,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 48,
+        "year": 2034,
+        "wealthScore": 62,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 49,
+        "year": 2035,
+        "wealthScore": 63,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 50,
+        "year": 2036,
+        "wealthScore": 55,
+        "event": "火生土，间接助财"
+      },
+      {
+        "age": 51,
+        "year": 2037,
+        "wealthScore": 54,
+        "event": "火生土，间接助财"
+      },
+      {
+        "age": 52,
+        "year": 2038,
+        "wealthScore": 52,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 53,
+        "year": 2039,
+        "wealthScore": 51,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 54,
+        "year": 2040,
+        "wealthScore": 43,
+        "event": "比劫争财，需防破财"
+      },
+      {
+        "age": 55,
+        "year": 2041,
+        "wealthScore": 40,
+        "event": "比劫争财，需防破财"
+      },
+      {
+        "age": 56,
+        "year": 2042,
+        "wealthScore": 54,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 57,
+        "year": 2043,
+        "wealthScore": 49,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 58,
+        "year": 2044,
+        "wealthScore": 68,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 59,
+        "year": 2045,
+        "wealthScore": 66,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 60,
+        "year": 2046,
+        "wealthScore": 63,
+        "event": "财星藏支，财运平稳"
+      },
+      {
+        "age": 61,
+        "year": 2047,
+        "wealthScore": 59,
+        "event": "财星藏支，财运平稳"
+      },
+      {
+        "age": 62,
+        "year": 2048,
+        "wealthScore": 51,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 63,
+        "year": 2049,
+        "wealthScore": 49,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 64,
+        "year": 2050,
+        "wealthScore": 39,
+        "event": "比劫争财，需防破财"
+      },
+      {
+        "age": 65,
+        "year": 2051,
+        "wealthScore": 41,
+        "event": "比劫争财，需防破财"
+      },
+      {
+        "age": 66,
+        "year": 2052,
+        "wealthScore": 47,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 67,
+        "year": 2053,
+        "wealthScore": 54,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 68,
+        "year": 2054,
+        "wealthScore": 65,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 69,
+        "year": 2055,
+        "wealthScore": 69,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 70,
+        "year": 2056,
+        "wealthScore": 57,
+        "event": "火生土，间接助财"
+      },
+      {
+        "age": 71,
+        "year": 2057,
+        "wealthScore": 57,
+        "event": "火生土，间接助财"
+      },
+      {
+        "age": 72,
+        "year": 2058,
+        "wealthScore": 56,
+        "event": "财星藏支，财运平稳"
+      },
+      {
+        "age": 73,
+        "year": 2059,
+        "wealthScore": 59,
+        "event": "财星藏支，财运平稳"
+      },
+      {
+        "age": 74,
+        "year": 2060,
+        "wealthScore": 42,
+        "event": "比劫争财，需防破财"
+      },
+      {
+        "age": 75,
+        "year": 2061,
+        "wealthScore": 38,
+        "event": "比劫争财，需防破财"
+      },
+      {
+        "age": 76,
+        "year": 2062,
+        "wealthScore": 45,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 77,
+        "year": 2063,
+        "wealthScore": 45,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 78,
+        "year": 2064,
+        "wealthScore": 63,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 79,
+        "year": 2065,
+        "wealthScore": 66,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 80,
+        "year": 2066,
+        "wealthScore": 55,
+        "event": "火生土，间接助财"
+      },
+      {
+        "age": 81,
+        "year": 2067,
+        "wealthScore": 60,
+        "event": "火生土，间接助财"
+      },
+      {
+        "age": 82,
+        "year": 2068,
+        "wealthScore": 48,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 83,
+        "year": 2069,
+        "wealthScore": 43,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 84,
+        "year": 2070,
+        "wealthScore": 57,
+        "event": "财星藏支，财运平稳"
+      },
+      {
+        "age": 85,
+        "year": 2071,
+        "wealthScore": 59,
+        "event": "财星藏支，财运平稳"
+      },
+      {
+        "age": 86,
+        "year": 2072,
+        "wealthScore": 50,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 87,
+        "year": 2073,
+        "wealthScore": 47,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 88,
+        "year": 2074,
+        "wealthScore": 65,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 89,
+        "year": 2075,
+        "wealthScore": 66,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 90,
+        "year": 2076,
+        "wealthScore": 55,
+        "event": "火生土，间接助财"
+      },
+      {
+        "age": 91,
+        "year": 2077,
+        "wealthScore": 61,
+        "event": "火生土，间接助财"
+      },
+      {
+        "age": 92,
+        "year": 2078,
+        "wealthScore": 52,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 93,
+        "year": 2079,
+        "wealthScore": 51,
+        "event": "财运一般，需积累"
+      },
+      {
+        "age": 94,
+        "year": 2080,
+        "wealthScore": 39,
+        "event": "比劫争财，需防破财"
+      },
+      {
+        "age": 95,
+        "year": 2081,
+        "wealthScore": 37,
+        "event": "比劫争财，需防破财"
+      },
+      {
+        "age": 96,
+        "year": 2082,
+        "wealthScore": 61,
+        "event": "财星藏支，财运平稳"
+      },
+      {
+        "age": 97,
+        "year": 2083,
+        "wealthScore": 64,
+        "event": "财星藏支，财运平稳"
+      },
+      {
+        "age": 98,
+        "year": 2084,
+        "wealthScore": 64,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 99,
+        "year": 2085,
+        "wealthScore": 62,
+        "event": "财星透干，财运较好"
+      },
+      {
+        "age": 100,
+        "year": 2086,
+        "wealthScore": 55,
+        "event": "火生土，间接助财"
+      }
+    ]
+  },
+  "loveAnalysis": {
+    "loveStar": "时柱午火为桃花，主异性缘佳。日支戌土为婚姻宫，藏火土，配偶性格稳重。命中无红鸾天喜，需大运流年引动。桃花在时柱，主中年后桃花运更旺。",
+    "loveStarScore": 7,
+    "spouseType": "日支戌土为婚姻宫，配偶性格稳重踏实，有责任心。时柱午火桃花，配偶外貌秀丽，性格热情。从事文化、教育、服务行业可能性大。配偶来自南方或东方方向。",
+    "spouseTypeScore": 7,
+    "lovePattern": "日支戌土婚姻宫，时柱午火桃花，桃花旺但婚姻宫略显躁动。早年感情多波折，宜30岁后成婚。婚后仍需注意异性缘过旺带来的困扰。",
+    "lovePatternType": "late",
+    "loveCycle": [
+      {
+        "startAge": 1,
+        "endAge": 15,
+        "trend": "dormant",
+        "description": "童年懵懂，感情未启"
+      },
+      {
+        "startAge": 16,
+        "endAge": 25,
+        "trend": "rise",
+        "description": "青春萌动，桃花渐起"
+      },
+      {
+        "startAge": 26,
+        "endAge": 35,
+        "trend": "bloom",
+        "description": "桃花盛开，姻缘来临"
+      },
+      {
+        "startAge": 36,
+        "endAge": 50,
+        "trend": "stable",
+        "description": "婚姻稳定，相濡以沫"
+      },
+      {
+        "startAge": 51,
+        "endAge": 100,
+        "trend": "stable",
+        "description": "晚年相伴，白头偕老"
+      }
+    ],
+    "loveRisk": "时柱午火桃花，异性缘佳但需防烂桃花。日支戌土婚姻宫，需防感情波折。大运走金水运时，感情风险增加。需谨慎处理异性关系。",
+    "loveRiskLevel": "medium",
+    "loveNoble": "感情贵人多为年长异性，属相为虎、马、狗者。贵人方位在南方、东方。多与火属性、木属性的人交往。",
+    "loveNobleDirection": "南方",
+    "bestMatch": "最佳婚配属相为虎（寅午戌三合）、马（午午自合）、狗（戌戌自合）。五行喜火木，宜找火木旺的命局。",
+    "avoidMatch": "需避开属鼠（子午相冲）、属牛（丑戌相刑）、属龙（辰戌相冲）。忌金水过旺之人。",
+    "marriagePalace": "日支戌土为婚姻宫，戌土藏火土，配偶多才多艺。戌午相邻，婚姻宫略显躁动，早年不宜早婚。36岁后入木火运，婚姻宫趋于稳定。",
+    "marriagePalaceScore": 6,
+    "childrenFortune": "时柱壬午为子女宫，午火为桃花，子女聪明但需耐心教育。适宜生育年份为木火年，如2025乙巳年、2026丙午年。子女以一到两个为宜。",
+    "childrenFortuneScore": 7,
+    "loveAdvice": "喜用颜色：红色、粉色、绿色。有利方位：南方、东方。佩戴建议：粉水晶招正桃花，红玛瑙避烂桃花。卧室勿放过多黑色物品，南方可摆放红色装饰。最佳相亲/约会方位：南方、东方。需避烂桃花年份：2025乙巳年、2026丙午年。",
+    "loveYearlyData": [
+      {
+        "age": 1,
+        "year": 1987,
+        "loveScore": 49,
+        "event": "童年无忧，懵懂天真"
+      },
+      {
+        "age": 2,
+        "year": 1988,
+        "loveScore": 49,
+        "event": "童年无忧，懵懂天真"
+      },
+      {
+        "age": 3,
+        "year": 1989,
+        "loveScore": 45,
+        "event": "童年无忧，懵懂天真"
+      },
+      {
+        "age": 4,
+        "year": 1990,
+        "loveScore": 44,
+        "event": "童年无忧，懵懂天真"
+      },
+      {
+        "age": 5,
+        "year": 1991,
+        "loveScore": 48,
+        "event": "童年无忧，懵懂天真"
+      },
+      {
+        "age": 6,
+        "year": 1992,
+        "loveScore": 42,
+        "event": "童年无忧，懵懂天真"
+      },
+      {
+        "age": 7,
+        "year": 1993,
+        "loveScore": 45,
+        "event": "童年无忧，懵懂天真"
+      },
+      {
+        "age": 8,
+        "year": 1994,
+        "loveScore": 40,
+        "event": "童年无忧，懵懂天真"
+      },
+      {
+        "age": 9,
+        "year": 1995,
+        "loveScore": 49,
+        "event": "童年无忧，懵懂天真"
+      },
+      {
+        "age": 10,
+        "year": 1996,
+        "loveScore": 41,
+        "event": "童年无忧，懵懂天真"
+      },
+      {
+        "age": 11,
+        "year": 1997,
+        "loveScore": 48,
+        "event": "童年无忧，懵懂天真"
+      },
+      {
+        "age": 12,
+        "year": 1998,
+        "loveScore": 46,
+        "event": "童年无忧，懵懂天真"
+      },
+      {
+        "age": 13,
+        "year": 1999,
+        "loveScore": 42,
+        "event": "童年无忧，懵懂天真"
+      },
+      {
+        "age": 14,
+        "year": 2000,
+        "loveScore": 41,
+        "event": "童年无忧，懵懂天真"
+      },
+      {
+        "age": 15,
+        "year": 2001,
+        "loveScore": 56,
+        "event": "青春萌动，桃花渐起"
+      },
+      {
+        "age": 16,
+        "year": 2002,
+        "loveScore": 56,
+        "event": "青春萌动，桃花渐起"
+      },
+      {
+        "age": 17,
+        "year": 2003,
+        "loveScore": 63,
+        "event": "青春萌动，桃花渐起"
+      },
+      {
+        "age": 18,
+        "year": 2004,
+        "loveScore": 60,
+        "event": "青春萌动，桃花渐起"
+      },
+      {
+        "age": 19,
+        "year": 2005,
+        "loveScore": 57,
+        "event": "青春萌动，桃花渐起"
+      },
+      {
+        "age": 20,
+        "year": 2006,
+        "loveScore": 54,
+        "event": "青春萌动，桃花渐起"
+      },
+      {
+        "age": 21,
+        "year": 2007,
+        "loveScore": 63,
+        "event": "青春萌动，桃花渐起"
+      },
+      {
+        "age": 22,
+        "year": 2008,
+        "loveScore": 52,
+        "event": "青春萌动，桃花渐起"
+      },
+      {
+        "age": 23,
+        "year": 2009,
+        "loveScore": 60,
+        "event": "青春萌动，桃花渐起"
+      },
+      {
+        "age": 24,
+        "year": 2010,
+        "loveScore": 55,
+        "event": "青春萌动，桃花渐起"
+      },
+      {
+        "age": 25,
+        "year": 2011,
+        "loveScore": 84,
+        "event": "桃花年，感情运势佳"
+      },
+      {
+        "age": 26,
+        "year": 2012,
+        "loveScore": 66,
+        "event": "感情平稳，需主动"
+      },
+      {
+        "age": 27,
+        "year": 2013,
+        "loveScore": 62,
+        "event": "感情平稳，需主动"
+      },
+      {
+        "age": 28,
+        "year": 2014,
+        "loveScore": 78,
+        "event": "桃花年，感情运势佳"
+      },
+      {
+        "age": 29,
+        "year": 2015,
+        "loveScore": 64,
+        "event": "感情平稳，需主动"
+      },
+      {
+        "age": 30,
+        "year": 2016,
+        "loveScore": 67,
+        "event": "感情平稳，需主动"
+      },
+      {
+        "age": 31,
+        "year": 2017,
+        "loveScore": 71,
+        "event": "桃花年，感情运势佳"
+      },
+      {
+        "age": 32,
+        "year": 2018,
+        "loveScore": 57,
+        "event": "感情平稳，需主动"
+      },
+      {
+        "age": 33,
+        "year": 2019,
+        "loveScore": 65,
+        "event": "感情平稳，需主动"
+      },
+      {
+        "age": 34,
+        "year": 2020,
+        "loveScore": 81,
+        "event": "桃花年，感情运势佳"
+      },
+      {
+        "age": 35,
+        "year": 2021,
+        "loveScore": 59,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 36,
+        "year": 2022,
+        "loveScore": 60,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 37,
+        "year": 2023,
+        "loveScore": 56,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 38,
+        "year": 2024,
+        "loveScore": 51,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 39,
+        "year": 2025,
+        "loveScore": 60,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 40,
+        "year": 2026,
+        "loveScore": 54,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 41,
+        "year": 2027,
+        "loveScore": 54,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 42,
+        "year": 2028,
+        "loveScore": 57,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 43,
+        "year": 2029,
+        "loveScore": 51,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 44,
+        "year": 2030,
+        "loveScore": 51,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 45,
+        "year": 2031,
+        "loveScore": 56,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 46,
+        "year": 2032,
+        "loveScore": 53,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 47,
+        "year": 2033,
+        "loveScore": 53,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 48,
+        "year": 2034,
+        "loveScore": 56,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 49,
+        "year": 2035,
+        "loveScore": 54,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 50,
+        "year": 2036,
+        "loveScore": 56,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 51,
+        "year": 2037,
+        "loveScore": 57,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 52,
+        "year": 2038,
+        "loveScore": 53,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 53,
+        "year": 2039,
+        "loveScore": 58,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 54,
+        "year": 2040,
+        "loveScore": 53,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 55,
+        "year": 2041,
+        "loveScore": 52,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 56,
+        "year": 2042,
+        "loveScore": 50,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 57,
+        "year": 2043,
+        "loveScore": 56,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 58,
+        "year": 2044,
+        "loveScore": 57,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 59,
+        "year": 2045,
+        "loveScore": 52,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 60,
+        "year": 2046,
+        "loveScore": 54,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 61,
+        "year": 2047,
+        "loveScore": 56,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 62,
+        "year": 2048,
+        "loveScore": 57,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 63,
+        "year": 2049,
+        "loveScore": 53,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 64,
+        "year": 2050,
+        "loveScore": 56,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 65,
+        "year": 2051,
+        "loveScore": 53,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 66,
+        "year": 2052,
+        "loveScore": 54,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 67,
+        "year": 2053,
+        "loveScore": 53,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 68,
+        "year": 2054,
+        "loveScore": 58,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 69,
+        "year": 2055,
+        "loveScore": 56,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 70,
+        "year": 2056,
+        "loveScore": 51,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 71,
+        "year": 2057,
+        "loveScore": 50,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 72,
+        "year": 2058,
+        "loveScore": 54,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 73,
+        "year": 2059,
+        "loveScore": 51,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 74,
+        "year": 2060,
+        "loveScore": 59,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 75,
+        "year": 2061,
+        "loveScore": 51,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 76,
+        "year": 2062,
+        "loveScore": 59,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 77,
+        "year": 2063,
+        "loveScore": 51,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 78,
+        "year": 2064,
+        "loveScore": 55,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 79,
+        "year": 2065,
+        "loveScore": 56,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 80,
+        "year": 2066,
+        "loveScore": 51,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 81,
+        "year": 2067,
+        "loveScore": 55,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 82,
+        "year": 2068,
+        "loveScore": 55,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 83,
+        "year": 2069,
+        "loveScore": 59,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 84,
+        "year": 2070,
+        "loveScore": 59,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 85,
+        "year": 2071,
+        "loveScore": 54,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 86,
+        "year": 2072,
+        "loveScore": 52,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 87,
+        "year": 2073,
+        "loveScore": 51,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 88,
+        "year": 2074,
+        "loveScore": 54,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 89,
+        "year": 2075,
+        "loveScore": 50,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 90,
+        "year": 2076,
+        "loveScore": 58,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 91,
+        "year": 2077,
+        "loveScore": 59,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 92,
+        "year": 2078,
+        "loveScore": 56,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 93,
+        "year": 2079,
+        "loveScore": 55,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 94,
+        "year": 2080,
+        "loveScore": 59,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 95,
+        "year": 2081,
+        "loveScore": 53,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 96,
+        "year": 2082,
+        "loveScore": 50,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 97,
+        "year": 2083,
+        "loveScore": 53,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 98,
+        "year": 2084,
+        "loveScore": 55,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 99,
+        "year": 2085,
+        "loveScore": 51,
+        "event": "感情稳定，相濡以沫"
+      },
+      {
+        "age": 100,
+        "year": 2086,
+        "loveScore": 52,
+        "event": "感情稳定，相濡以沫"
+      }
+    ]
+  },
+  "chartPoints": [
+    {
+      "age": 1,
+      "year": 1987,
+      "daYun": "辛丑",
+      "ganZhi": "丁卯",
+      "open": 64,
+      "close": 67,
+      "high": 70,
+      "low": 63,
+      "score": 67,
+      "reason": "流年丁卯，火调候透干木财生扶，宜积极进取"
+    },
+    {
+      "age": 2,
+      "year": 1988,
+      "daYun": "辛丑",
+      "ganZhi": "戊辰",
+      "open": 51,
+      "close": 57,
+      "high": 58,
+      "low": 49,
+      "score": 53,
+      "reason": "流年戊辰，土印生身土印相助，印星为用贵人扶持，运势平稳前进"
+    },
+    {
+      "age": 3,
+      "year": 1989,
+      "daYun": "辛丑",
+      "ganZhi": "己巳",
+      "open": 52,
+      "close": 55,
+      "high": 56,
+      "low": 51,
+      "score": 59,
+      "reason": "流年己巳，土印生身火调候稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 4,
+      "year": 1990,
+      "daYun": "辛丑",
+      "ganZhi": "庚午",
+      "open": 51,
+      "close": 55,
+      "high": 59,
+      "low": 46,
+      "score": 52,
+      "reason": "流年庚午，金比劫生身火调候稳固，稳步发展可期"
+    },
+    {
+      "age": 5,
+      "year": 1991,
+      "daYun": "辛丑",
+      "ganZhi": "辛未",
+      "open": 42,
+      "close": 44,
+      "high": 49,
+      "low": 38,
+      "score": 45,
+      "reason": "流年辛未，金比劫透干土印相合，需谨慎应对"
+    },
+    {
+      "age": 6,
+      "year": 1992,
+      "daYun": "辛丑",
+      "ganZhi": "壬申",
+      "open": 30,
+      "close": 37,
+      "high": 39,
+      "low": 26,
+      "score": 33,
+      "reason": "流年壬申，水泄气不利金比劫寒湿，宜保守应对谨慎"
+    },
+    {
+      "age": 7,
+      "year": 1993,
+      "daYun": "辛丑",
+      "ganZhi": "癸酉",
+      "open": 30,
+      "close": 33,
+      "high": 38,
+      "low": 29,
+      "score": 32,
+      "reason": "流年癸酉，水泄气不利金比劫受阻，需谨慎保守应对"
+    },
+    {
+      "age": 8,
+      "year": 1994,
+      "daYun": "辛丑",
+      "ganZhi": "甲戌",
+      "open": 60,
+      "close": 64,
+      "high": 65,
+      "low": 58,
+      "score": 61,
+      "reason": "流年甲戌，木财生身土印相助，印星为用贵人扶持，运势平稳前进"
+    },
+    {
+      "age": 9,
+      "year": 1995,
+      "daYun": "辛丑",
+      "ganZhi": "乙亥",
+      "open": 42,
+      "close": 41,
+      "high": 46,
+      "low": 39,
+      "score": 44,
+      "reason": "流年乙亥，木财生身水地稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 10,
+      "year": 1996,
+      "daYun": "辛丑",
+      "ganZhi": "丙子",
+      "open": 49,
+      "close": 53,
+      "high": 56,
+      "low": 44,
+      "score": 52,
+      "reason": "流年丙子，火调候透干水地相配，宜守成发展"
+    },
+    {
+      "age": 11,
+      "year": 1997,
+      "daYun": "壬寅",
+      "ganZhi": "丁丑",
+      "open": 59,
+      "close": 62,
+      "high": 68,
+      "low": 53,
+      "score": 65,
+      "reason": "流年丁丑，火调候生身土印稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 12,
+      "year": 1998,
+      "daYun": "壬寅",
+      "ganZhi": "戊寅",
+      "open": 59,
+      "close": 61,
+      "high": 62,
+      "low": 54,
+      "score": 61,
+      "reason": "流年戊寅，土印透干木财相配，宜守成发展"
+    },
+    {
+      "age": 13,
+      "year": 1999,
+      "daYun": "壬寅",
+      "ganZhi": "己卯",
+      "open": 54,
+      "close": 56,
+      "high": 56,
+      "low": 53,
+      "score": 56,
+      "reason": "流年己卯，土印生身木财稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 14,
+      "year": 2000,
+      "daYun": "壬寅",
+      "ganZhi": "庚辰",
+      "open": 34,
+      "close": 43,
+      "high": 43,
+      "low": 31,
+      "score": 42,
+      "reason": "流年庚辰，金比劫泄气土印比劫，需防范"
+    },
+    {
+      "age": 15,
+      "year": 2001,
+      "daYun": "壬寅",
+      "ganZhi": "辛巳",
+      "open": 52,
+      "close": 55,
+      "high": 58,
+      "low": 47,
+      "score": 54,
+      "reason": "流年辛巳，金比劫生身火调候稳固，稳步发展可期"
+    },
+    {
+      "age": 16,
+      "year": 2002,
+      "daYun": "壬寅",
+      "ganZhi": "壬午",
+      "open": 36,
+      "close": 43,
+      "high": 48,
+      "low": 32,
+      "score": 42,
+      "reason": "流年壬午，水泄气生身火调候稳固，稳步发展可期"
+    },
+    {
+      "age": 17,
+      "year": 2003,
+      "daYun": "壬寅",
+      "ganZhi": "癸未",
+      "open": 33,
+      "close": 33,
+      "high": 36,
+      "low": 31,
+      "score": 35,
+      "reason": "流年癸未，水泄气泄身土印不利，宜守不宜攻"
+    },
+    {
+      "age": 18,
+      "year": 2004,
+      "daYun": "壬寅",
+      "ganZhi": "甲申",
+      "open": 50,
+      "close": 49,
+      "high": 52,
+      "low": 44,
+      "score": 53,
+      "reason": "流年甲申，木财透干金比劫相配，宜守成发展"
+    },
+    {
+      "age": 19,
+      "year": 2005,
+      "daYun": "壬寅",
+      "ganZhi": "乙酉",
+      "open": 47,
+      "close": 49,
+      "high": 52,
+      "low": 46,
+      "score": 50,
+      "reason": "流年乙酉，木财生身金比劫稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 20,
+      "year": 2006,
+      "daYun": "壬寅",
+      "ganZhi": "丙戌",
+      "open": 65,
+      "close": 65,
+      "high": 68,
+      "low": 65,
+      "score": 66,
+      "reason": "流年丙戌，火调候透干土印相合，需谨慎应对"
+    },
+    {
+      "age": 21,
+      "year": 2007,
+      "daYun": "癸卯",
+      "ganZhi": "丁亥",
+      "open": 53,
+      "close": 53,
+      "high": 58,
+      "low": 50,
+      "score": 55,
+      "reason": "流年丁亥，火调候生身水地相助，印星为用贵人扶持，运势平稳前进"
+    },
+    {
+      "age": 22,
+      "year": 2008,
+      "daYun": "癸卯",
+      "ganZhi": "戊子",
+      "open": 31,
+      "close": 42,
+      "high": 43,
+      "low": 26,
+      "score": 39,
+      "reason": "流年戊子，土印泄身水地不利，宜守不宜攻"
+    },
+    {
+      "age": 23,
+      "year": 2009,
+      "daYun": "癸卯",
+      "ganZhi": "己丑",
+      "open": 51,
+      "close": 52,
+      "high": 54,
+      "low": 50,
+      "score": 52,
+      "reason": "流年己丑，土印生身土印稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 24,
+      "year": 2010,
+      "daYun": "癸卯",
+      "ganZhi": "庚寅",
+      "open": 44,
+      "close": 53,
+      "high": 59,
+      "low": 44,
+      "score": 51,
+      "reason": "流年庚寅，金比劫透干木财相配，宜守成发展"
+    },
+    {
+      "age": 25,
+      "year": 2011,
+      "daYun": "癸卯",
+      "ganZhi": "辛卯",
+      "open": 48,
+      "close": 51,
+      "high": 57,
+      "low": 48,
+      "score": 53,
+      "reason": "流年辛卯，金比劫生身木财相助，印星为用贵人扶持，运势平稳前进"
+    },
+    {
+      "age": 26,
+      "year": 2012,
+      "daYun": "癸卯",
+      "ganZhi": "壬辰",
+      "open": 33,
+      "close": 42,
+      "high": 43,
+      "low": 32,
+      "score": 40,
+      "reason": "流年壬辰，水泄气泄身土印不利，宜守不宜攻"
+    },
+    {
+      "age": 27,
+      "year": 2013,
+      "daYun": "癸卯",
+      "ganZhi": "癸巳",
+      "open": 38,
+      "close": 42,
+      "high": 44,
+      "low": 33,
+      "score": 45,
+      "reason": "流年癸巳，水泄气透干火调候相配，宜守成发展"
+    },
+    {
+      "age": 28,
+      "year": 2014,
+      "daYun": "癸卯",
+      "ganZhi": "甲午",
+      "open": 64,
+      "close": 66,
+      "high": 68,
+      "low": 59,
+      "score": 66,
+      "reason": "流年甲午，木财透干火调候相生，财运亨通宜进取"
+    },
+    {
+      "age": 29,
+      "year": 2015,
+      "daYun": "癸卯",
+      "ganZhi": "乙未",
+      "open": 47,
+      "close": 54,
+      "high": 57,
+      "low": 42,
+      "score": 55,
+      "reason": "流年乙未，木财透干土印相合，需谨慎应对"
+    },
+    {
+      "age": 30,
+      "year": 2016,
+      "daYun": "癸卯",
+      "ganZhi": "丙申",
+      "open": 52,
+      "close": 52,
+      "high": 53,
+      "low": 49,
+      "score": 53,
+      "reason": "流年丙申，火调候生身金比劫相助，运势平稳前进"
+    },
+    {
+      "age": 31,
+      "year": 2017,
+      "daYun": "甲辰",
+      "ganZhi": "丁酉",
+      "open": 62,
+      "close": 66,
+      "high": 71,
+      "low": 56,
+      "score": 62,
+      "reason": "流年丁酉，火调候透干金比劫相生，财运亨通宜进取"
+    },
+    {
+      "age": 32,
+      "year": 2018,
+      "daYun": "甲辰",
+      "ganZhi": "戊戌",
+      "open": 57,
+      "close": 62,
+      "high": 63,
+      "low": 57,
+      "score": 60,
+      "reason": "流年戊戌，土印生身土印稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 33,
+      "year": 2019,
+      "daYun": "甲辰",
+      "ganZhi": "己亥",
+      "open": 50,
+      "close": 54,
+      "high": 56,
+      "low": 46,
+      "score": 53,
+      "reason": "流年己亥，土印生身水地相助，印星为用贵人扶持，运势平稳前进"
+    },
+    {
+      "age": 34,
+      "year": 2020,
+      "daYun": "甲辰",
+      "ganZhi": "庚子",
+      "open": 35,
+      "close": 43,
+      "high": 48,
+      "low": 32,
+      "score": 41,
+      "reason": "流年庚子，金比劫泄身水地不利，宜守不宜攻"
+    },
+    {
+      "age": 35,
+      "year": 2021,
+      "daYun": "甲辰",
+      "ganZhi": "辛丑",
+      "open": 55,
+      "close": 59,
+      "high": 63,
+      "low": 53,
+      "score": 60,
+      "reason": "流年辛丑，金比劫生身土印稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 36,
+      "year": 2022,
+      "daYun": "甲辰",
+      "ganZhi": "壬寅",
+      "open": 48,
+      "close": 46,
+      "high": 49,
+      "low": 46,
+      "score": 50,
+      "reason": "流年壬寅，水泄气透干木财相合，需谨慎应对"
+    },
+    {
+      "age": 37,
+      "year": 2023,
+      "daYun": "甲辰",
+      "ganZhi": "癸卯",
+      "open": 49,
+      "close": 56,
+      "high": 61,
+      "low": 49,
+      "score": 52,
+      "reason": "流年癸卯，水泄气透干木财相合，需谨慎应对"
+    },
+    {
+      "age": 38,
+      "year": 2024,
+      "daYun": "甲辰",
+      "ganZhi": "甲辰",
+      "open": 65,
+      "close": 72,
+      "high": 72,
+      "low": 62,
+      "score": 70,
+      "reason": "流年甲辰，木财透干土印相生，财运亨通宜进取"
+    },
+    {
+      "age": 39,
+      "year": 2025,
+      "daYun": "甲辰",
+      "ganZhi": "乙巳",
+      "open": 74,
+      "close": 72,
+      "high": 77,
+      "low": 68,
+      "score": 75,
+      "reason": "流年乙巳，木财透干火调候生扶，宜积极进取"
+    },
+    {
+      "age": 40,
+      "year": 2026,
+      "daYun": "甲辰",
+      "ganZhi": "丙午",
+      "open": 70,
+      "close": 76,
+      "high": 76,
+      "low": 70,
+      "score": 77,
+      "reason": "流年丙午，火调候透干火调候生财，运势佳可积极把握"
+    },
+    {
+      "age": 41,
+      "year": 2027,
+      "daYun": "乙巳",
+      "ganZhi": "丁未",
+      "open": 71,
+      "close": 73,
+      "high": 77,
+      "low": 69,
+      "score": 76,
+      "reason": "流年丁未，火调候透干土印相助，宜把握机遇开拓"
+    },
+    {
+      "age": 42,
+      "year": 2028,
+      "daYun": "乙巳",
+      "ganZhi": "戊申",
+      "open": 52,
+      "close": 55,
+      "high": 55,
+      "low": 51,
+      "score": 57,
+      "reason": "流年戊申，土印透干金比劫相配，宜守成发展"
+    },
+    {
+      "age": 43,
+      "year": 2029,
+      "daYun": "乙巳",
+      "ganZhi": "己酉",
+      "open": 44,
+      "close": 52,
+      "high": 57,
+      "low": 40,
+      "score": 52,
+      "reason": "流年己酉，土印生身金比劫相助，印星为用贵人扶持，运势平稳前进"
+    },
+    {
+      "age": 44,
+      "year": 2030,
+      "daYun": "乙巳",
+      "ganZhi": "庚戌",
+      "open": 44,
+      "close": 49,
+      "high": 53,
+      "low": 38,
+      "score": 49,
+      "reason": "流年庚戌，金比劫生身土印稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 45,
+      "year": 2031,
+      "daYun": "乙巳",
+      "ganZhi": "辛亥",
+      "open": 48,
+      "close": 48,
+      "high": 52,
+      "low": 44,
+      "score": 50,
+      "reason": "流年辛亥，金比劫生身水地相助，印星为用贵人扶持，运势平稳前进"
+    },
+    {
+      "age": 46,
+      "year": 2032,
+      "daYun": "乙巳",
+      "ganZhi": "壬子",
+      "open": 35,
+      "close": 36,
+      "high": 41,
+      "low": 31,
+      "score": 38,
+      "reason": "流年壬子，水泄气泄身水地不利，宜守不宜攻"
+    },
+    {
+      "age": 47,
+      "year": 2033,
+      "daYun": "乙巳",
+      "ganZhi": "癸丑",
+      "open": 43,
+      "close": 45,
+      "high": 45,
+      "low": 41,
+      "score": 49,
+      "reason": "流年癸丑，水泄气透干土印相合，需谨慎应对"
+    },
+    {
+      "age": 48,
+      "year": 2034,
+      "daYun": "乙巳",
+      "ganZhi": "甲寅",
+      "open": 67,
+      "close": 67,
+      "high": 73,
+      "low": 61,
+      "score": 71,
+      "reason": "流年甲寅，木财透干木财相助，宜把握机遇开拓"
+    },
+    {
+      "age": 49,
+      "year": 2035,
+      "daYun": "乙巳",
+      "ganZhi": "乙卯",
+      "open": 68,
+      "close": 69,
+      "high": 72,
+      "low": 64,
+      "score": 69,
+      "reason": "流年乙卯，木财透干木财相生，财运亨通宜进取"
+    },
+    {
+      "age": 50,
+      "year": 2036,
+      "daYun": "乙巳",
+      "ganZhi": "丙辰",
+      "open": 66,
+      "close": 71,
+      "high": 74,
+      "low": 61,
+      "score": 72,
+      "reason": "流年丙辰，火调候透干土印生财，运势佳可积极把握"
+    },
+    {
+      "age": 51,
+      "year": 2037,
+      "daYun": "丙午",
+      "ganZhi": "丁巳",
+      "open": 78,
+      "close": 84,
+      "high": 88,
+      "low": 72,
+      "score": 81,
+      "reason": "流年丁巳，火调候透干火调候生扶，宜积极进取"
+    },
+    {
+      "age": 52,
+      "year": 2038,
+      "daYun": "丙午",
+      "ganZhi": "戊午",
+      "open": 60,
+      "close": 68,
+      "high": 74,
+      "low": 59,
+      "score": 67,
+      "reason": "流年戊午，土印透干火调候生扶，宜积极进取"
+    },
+    {
+      "age": 53,
+      "year": 2039,
+      "daYun": "丙午",
+      "ganZhi": "己未",
+      "open": 67,
+      "close": 67,
+      "high": 68,
+      "low": 63,
+      "score": 67,
+      "reason": "流年己未，土印透干土印相配，宜守成发展"
+    },
+    {
+      "age": 54,
+      "year": 2040,
+      "daYun": "丙午",
+      "ganZhi": "庚申",
+      "open": 45,
+      "close": 44,
+      "high": 47,
+      "low": 43,
+      "score": 46,
+      "reason": "流年庚申，金比劫透干金比劫相配，宜守成发展"
+    },
+    {
+      "age": 55,
+      "year": 2041,
+      "daYun": "丙午",
+      "ganZhi": "辛酉",
+      "open": 44,
+      "close": 50,
+      "high": 50,
+      "low": 43,
+      "score": 48,
+      "reason": "流年辛酉，金比劫生身金比劫相助，运势平稳前进"
+    },
+    {
+      "age": 56,
+      "year": 2042,
+      "daYun": "丙午",
+      "ganZhi": "壬戌",
+      "open": 40,
+      "close": 46,
+      "high": 51,
+      "low": 38,
+      "score": 46,
+      "reason": "流年壬戌，水泄气生身土印稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 57,
+      "year": 2043,
+      "daYun": "丙午",
+      "ganZhi": "癸亥",
+      "open": 29,
+      "close": 32,
+      "high": 32,
+      "low": 29,
+      "score": 34,
+      "reason": "流年癸亥，水泄气不利水地受阻，需谨慎保守应对"
+    },
+    {
+      "age": 58,
+      "year": 2044,
+      "daYun": "丙午",
+      "ganZhi": "甲子",
+      "open": 55,
+      "close": 61,
+      "high": 64,
+      "low": 50,
+      "score": 59,
+      "reason": "流年甲子，木财生身水地稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 59,
+      "year": 2045,
+      "daYun": "丙午",
+      "ganZhi": "乙丑",
+      "open": 69,
+      "close": 70,
+      "high": 71,
+      "low": 66,
+      "score": 69,
+      "reason": "流年乙丑，木财透干土印相生，财运亨通宜进取"
+    },
+    {
+      "age": 60,
+      "year": 2046,
+      "daYun": "丙午",
+      "ganZhi": "丙寅",
+      "open": 77,
+      "close": 79,
+      "high": 84,
+      "low": 75,
+      "score": 82,
+      "reason": "流年丙寅，火调候透干木财相生，财运亨通宜进取"
+    },
+    {
+      "age": 61,
+      "year": 2047,
+      "daYun": "丁未",
+      "ganZhi": "丁卯",
+      "open": 75,
+      "close": 79,
+      "high": 81,
+      "low": 72,
+      "score": 75,
+      "reason": "流年丁卯，火调候透干木财生扶，宜积极进取"
+    },
+    {
+      "age": 62,
+      "year": 2048,
+      "daYun": "丁未",
+      "ganZhi": "戊辰",
+      "open": 55,
+      "close": 59,
+      "high": 60,
+      "low": 51,
+      "score": 59,
+      "reason": "流年戊辰，土印生身土印相助，印星为用贵人扶持，运势平稳前进"
+    },
+    {
+      "age": 63,
+      "year": 2049,
+      "daYun": "丁未",
+      "ganZhi": "己巳",
+      "open": 69,
+      "close": 75,
+      "high": 80,
+      "low": 65,
+      "score": 72,
+      "reason": "流年己巳，土印透干火调候生扶，宜积极进取"
+    },
+    {
+      "age": 64,
+      "year": 2050,
+      "daYun": "丁未",
+      "ganZhi": "庚午",
+      "open": 60,
+      "close": 61,
+      "high": 67,
+      "low": 57,
+      "score": 62,
+      "reason": "流年庚午，金比劫生身火调候稳固，稳步发展可期"
+    },
+    {
+      "age": 65,
+      "year": 2051,
+      "daYun": "丁未",
+      "ganZhi": "辛未",
+      "open": 52,
+      "close": 62,
+      "high": 67,
+      "low": 52,
+      "score": 60,
+      "reason": "流年辛未，金比劫透干土印相合，需谨慎应对"
+    },
+    {
+      "age": 66,
+      "year": 2052,
+      "daYun": "丁未",
+      "ganZhi": "壬申",
+      "open": 33,
+      "close": 38,
+      "high": 44,
+      "low": 30,
+      "score": 40,
+      "reason": "流年壬申，水泄气不利金比劫寒湿，宜保守应对谨慎"
+    },
+    {
+      "age": 67,
+      "year": 2053,
+      "daYun": "丁未",
+      "ganZhi": "癸酉",
+      "open": 42,
+      "close": 43,
+      "high": 47,
+      "low": 40,
+      "score": 44,
+      "reason": "流年癸酉，水泄气不利金比劫受阻，需谨慎保守应对"
+    },
+    {
+      "age": 68,
+      "year": 2054,
+      "daYun": "丁未",
+      "ganZhi": "甲戌",
+      "open": 70,
+      "close": 69,
+      "high": 73,
+      "low": 69,
+      "score": 71,
+      "reason": "流年甲戌，木财透干土印相生，财运亨通宜进取"
+    },
+    {
+      "age": 69,
+      "year": 2055,
+      "daYun": "丁未",
+      "ganZhi": "乙亥",
+      "open": 59,
+      "close": 60,
+      "high": 64,
+      "low": 57,
+      "score": 60,
+      "reason": "流年乙亥，木财生身水地稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 70,
+      "year": 2056,
+      "daYun": "丁未",
+      "ganZhi": "丙子",
+      "open": 55,
+      "close": 65,
+      "high": 65,
+      "low": 55,
+      "score": 61,
+      "reason": "流年丙子，火调候透干水地相配，宜守成发展"
+    },
+    {
+      "age": 71,
+      "year": 2057,
+      "daYun": "戊申",
+      "ganZhi": "丁丑",
+      "open": 67,
+      "close": 68,
+      "high": 71,
+      "low": 63,
+      "score": 70,
+      "reason": "流年丁丑，火调候透干土印生扶，运势强劲宜积极进取"
+    },
+    {
+      "age": 72,
+      "year": 2058,
+      "daYun": "戊申",
+      "ganZhi": "戊寅",
+      "open": 61,
+      "close": 67,
+      "high": 70,
+      "low": 58,
+      "score": 64,
+      "reason": "流年戊寅，土印透干木财相配，运势一般需谨慎行事，宜守成发展"
+    },
+    {
+      "age": 73,
+      "year": 2059,
+      "daYun": "戊申",
+      "ganZhi": "己卯",
+      "open": 60,
+      "close": 63,
+      "high": 66,
+      "low": 57,
+      "score": 63,
+      "reason": "流年己卯，土印生身木财稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 74,
+      "year": 2060,
+      "daYun": "戊申",
+      "ganZhi": "庚辰",
+      "open": 44,
+      "close": 53,
+      "high": 54,
+      "low": 39,
+      "score": 51,
+      "reason": "流年庚辰，金比劫生身土印相助，印星为用贵人扶持，运势平稳前进"
+    },
+    {
+      "age": 75,
+      "year": 2061,
+      "daYun": "戊申",
+      "ganZhi": "辛巳",
+      "open": 56,
+      "close": 66,
+      "high": 68,
+      "low": 53,
+      "score": 63,
+      "reason": "流年辛巳，金比劫生身火调候稳固，稳步发展可期"
+    },
+    {
+      "age": 76,
+      "year": 2062,
+      "daYun": "戊申",
+      "ganZhi": "壬午",
+      "open": 50,
+      "close": 51,
+      "high": 53,
+      "low": 47,
+      "score": 52,
+      "reason": "流年壬午，水泄气生身火调候稳固，稳步发展可期"
+    },
+    {
+      "age": 77,
+      "year": 2063,
+      "daYun": "戊申",
+      "ganZhi": "癸未",
+      "open": 37,
+      "close": 37,
+      "high": 38,
+      "low": 36,
+      "score": 39,
+      "reason": "流年癸未，水泄气泄身土印不利，比劫争财需防范，宜守不宜攻"
+    },
+    {
+      "age": 78,
+      "year": 2064,
+      "daYun": "戊申",
+      "ganZhi": "甲申",
+      "open": 48,
+      "close": 53,
+      "high": 54,
+      "low": 46,
+      "score": 54,
+      "reason": "流年甲申，木财透干金比劫相配，运势一般需谨慎行事，宜守成发展"
+    },
+    {
+      "age": 79,
+      "year": 2065,
+      "daYun": "戊申",
+      "ganZhi": "乙酉",
+      "open": 50,
+      "close": 52,
+      "high": 54,
+      "low": 50,
+      "score": 53,
+      "reason": "流年乙酉，木财生身金比劫稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 80,
+      "year": 2066,
+      "daYun": "戊申",
+      "ganZhi": "丙戌",
+      "open": 64,
+      "close": 73,
+      "high": 74,
+      "low": 62,
+      "score": 69,
+      "reason": "流年丙戌，火调候透干土印生财，运势佳可积极把握"
+    },
+    {
+      "age": 81,
+      "year": 2067,
+      "daYun": "己酉",
+      "ganZhi": "丁亥",
+      "open": 46,
+      "close": 56,
+      "high": 60,
+      "low": 43,
+      "score": 53,
+      "reason": "流年丁亥，火调候生身水地相助，印星为用贵人扶持，运势平稳前进"
+    },
+    {
+      "age": 82,
+      "year": 2068,
+      "daYun": "己酉",
+      "ganZhi": "戊子",
+      "open": 43,
+      "close": 49,
+      "high": 50,
+      "low": 40,
+      "score": 49,
+      "reason": "流年戊子，土印生身水地稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 83,
+      "year": 2069,
+      "daYun": "己酉",
+      "ganZhi": "己丑",
+      "open": 55,
+      "close": 58,
+      "high": 61,
+      "low": 50,
+      "score": 57,
+      "reason": "流年己丑，土印生身土印稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 84,
+      "year": 2070,
+      "daYun": "己酉",
+      "ganZhi": "庚寅",
+      "open": 41,
+      "close": 45,
+      "high": 50,
+      "low": 36,
+      "score": 49,
+      "reason": "流年庚寅，金比劫透干木财相配，运势一般需谨慎行事，宜守成发展"
+    },
+    {
+      "age": 85,
+      "year": 2071,
+      "daYun": "己酉",
+      "ganZhi": "辛卯",
+      "open": 54,
+      "close": 53,
+      "high": 54,
+      "low": 51,
+      "score": 55,
+      "reason": "流年辛卯，金比劫生身木财相助，印星为用贵人扶持，运势平稳前进"
+    },
+    {
+      "age": 86,
+      "year": 2072,
+      "daYun": "己酉",
+      "ganZhi": "壬辰",
+      "open": 39,
+      "close": 50,
+      "high": 51,
+      "low": 35,
+      "score": 46,
+      "reason": "流年壬辰，水泄气泄身土印不利，比劫争财需防范，宜守不宜攻"
+    },
+    {
+      "age": 87,
+      "year": 2073,
+      "daYun": "己酉",
+      "ganZhi": "癸巳",
+      "open": 48,
+      "close": 57,
+      "high": 59,
+      "low": 44,
+      "score": 54,
+      "reason": "流年癸巳，水泄气透干火调候相配，宜守成发展"
+    },
+    {
+      "age": 88,
+      "year": 2074,
+      "daYun": "己酉",
+      "ganZhi": "甲午",
+      "open": 67,
+      "close": 66,
+      "high": 70,
+      "low": 64,
+      "score": 68,
+      "reason": "流年甲午，木财透干火调候相生，财运亨通宜进取"
+    },
+    {
+      "age": 89,
+      "year": 2075,
+      "daYun": "己酉",
+      "ganZhi": "乙未",
+      "open": 61,
+      "close": 63,
+      "high": 66,
+      "low": 61,
+      "score": 64,
+      "reason": "流年乙未，木财透干土印相合，运势一般波动不大，需谨慎应对"
+    },
+    {
+      "age": 90,
+      "year": 2076,
+      "daYun": "己酉",
+      "ganZhi": "丙申",
+      "open": 59,
+      "close": 61,
+      "high": 62,
+      "low": 54,
+      "score": 59,
+      "reason": "流年丙申，火调候生身金比劫相助，运势平稳前进"
+    },
+    {
+      "age": 91,
+      "year": 2077,
+      "daYun": "庚戌",
+      "ganZhi": "丁酉",
+      "open": 48,
+      "close": 53,
+      "high": 56,
+      "low": 42,
+      "score": 52,
+      "reason": "流年丁酉，火调候生身金比劫相助，运势平稳前进"
+    },
+    {
+      "age": 92,
+      "year": 2078,
+      "daYun": "庚戌",
+      "ganZhi": "戊戌",
+      "open": 49,
+      "close": 56,
+      "high": 61,
+      "low": 47,
+      "score": 56,
+      "reason": "流年戊戌，土印生身土印稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 93,
+      "year": 2079,
+      "daYun": "庚戌",
+      "ganZhi": "己亥",
+      "open": 40,
+      "close": 46,
+      "high": 47,
+      "low": 35,
+      "score": 44,
+      "reason": "流年己亥，土印泄气水地比劫，需防范"
+    },
+    {
+      "age": 94,
+      "year": 2080,
+      "daYun": "庚戌",
+      "ganZhi": "庚子",
+      "open": 36,
+      "close": 37,
+      "high": 41,
+      "low": 31,
+      "score": 36,
+      "reason": "流年庚子，金比劫泄身水地不利，宜守不宜攻"
+    },
+    {
+      "age": 95,
+      "year": 2081,
+      "daYun": "庚戌",
+      "ganZhi": "辛丑",
+      "open": 44,
+      "close": 50,
+      "high": 52,
+      "low": 44,
+      "score": 52,
+      "reason": "流年辛丑，金比劫生身土印稳固，根基扎实运势平稳，稳步发展可期"
+    },
+    {
+      "age": 96,
+      "year": 2082,
+      "daYun": "庚戌",
+      "ganZhi": "壬寅",
+      "open": 36,
+      "close": 41,
+      "high": 44,
+      "low": 33,
+      "score": 43,
+      "reason": "流年壬寅，水泄气不利木财寒湿，宜保守应对谨慎"
+    },
+    {
+      "age": 97,
+      "year": 2083,
+      "daYun": "庚戌",
+      "ganZhi": "癸卯",
+      "open": 34,
+      "close": 38,
+      "high": 41,
+      "low": 33,
+      "score": 42,
+      "reason": "流年癸卯，水泄气不利木财寒湿，宜保守应对谨慎"
+    },
+    {
+      "age": 98,
+      "year": 2084,
+      "daYun": "庚戌",
+      "ganZhi": "甲辰",
+      "open": 57,
+      "close": 61,
+      "high": 67,
+      "low": 55,
+      "score": 60,
+      "reason": "流年甲辰，木财生身土印相助，印星为用贵人扶持，运势平稳前进"
+    },
+    {
+      "age": 99,
+      "year": 2085,
+      "daYun": "庚戌",
+      "ganZhi": "乙巳",
+      "open": 55,
+      "close": 66,
+      "high": 67,
+      "low": 52,
+      "score": 62,
+      "reason": "流年乙巳，木财透干火调候生扶，宜积极进取"
+    },
+    {
+      "age": 100,
+      "year": 2086,
+      "daYun": "庚戌",
+      "ganZhi": "丙午",
+      "open": 67,
+      "close": 70,
+      "high": 70,
+      "low": 65,
+      "score": 72,
+      "reason": "流年丙午，火调候透干火调候生财，运势佳可积极把握"
+    }
+  ]
+}

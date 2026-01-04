@@ -132,16 +132,40 @@ const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
 请严格按照系统指令生成 JSON 数据。务必只返回纯JSON格式数据，不要包含任何markdown代码块标记或其他文字说明。`;
     };
 
-    // 复制完整提示词
+    // 复制完整提示词（兼容 HTTP 环境）
     const copyFullPrompt = async () => {
         const fullPrompt = `=== 系统指令 (System Prompt) ===\n\n${BAZI_SYSTEM_INSTRUCTION}\n\n=== 用户提示词 (User Prompt) ===\n\n${generateUserPrompt()}`;
 
         try {
-            await navigator.clipboard.writeText(fullPrompt);
+            // 优先使用现代 Clipboard API（需要 HTTPS）
+            if (navigator.clipboard && window.isSecureContext) {
+                await navigator.clipboard.writeText(fullPrompt);
+            } else {
+                // HTTP 环境下的回退方案：使用 execCommand
+                const textArea = document.createElement('textarea');
+                textArea.value = fullPrompt;
+                // 设置样式使其不可见
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-9999px';
+                textArea.style.top = '-9999px';
+                textArea.style.opacity = '0';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                if (!successful) {
+                    throw new Error('execCommand 复制失败');
+                }
+            }
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
         } catch (err) {
             console.error('复制失败', err);
+            // 显示用户友好的错误提示
+            alert('复制失败，请手动选择文本复制');
         }
     };
 

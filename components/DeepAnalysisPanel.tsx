@@ -81,7 +81,7 @@ ${genderHint}
 ${type === 'wealth' ? '必须生成 wealthYearlyData 数组，包含 100 条数据（1-100岁）。' : '必须生成 loveYearlyData 数组，包含 100 条数据（1-100岁）。'}`;
   };
 
-  // 复制完整提示词
+  // 复制完整提示词（兼容 HTTP 环境）
   const copyFullPrompt = async (type: AnalysisType) => {
     const systemPrompt = type === 'wealth' 
       ? WEALTH_ANALYSIS_SYSTEM_INSTRUCTION 
@@ -90,7 +90,29 @@ ${type === 'wealth' ? '必须生成 wealthYearlyData 数组，包含 100 条数�
     const fullPrompt = `=== 系统指令 (System Prompt) ===\n\n${systemPrompt}\n\n=== 用户提示词 (User Prompt) ===\n\n${userPrompt}`;
 
     try {
-      await navigator.clipboard.writeText(fullPrompt);
+      // 优先使用现代 Clipboard API（需要 HTTPS）
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(fullPrompt);
+      } else {
+        // HTTP 环境下的回退方案：使用 execCommand
+        const textArea = document.createElement('textarea');
+        textArea.value = fullPrompt;
+        // 设置样式使其不可见
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-9999px';
+        textArea.style.top = '-9999px';
+        textArea.style.opacity = '0';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        
+        const successful = document.execCommand('copy');
+        document.body.removeChild(textArea);
+        
+        if (!successful) {
+          throw new Error('execCommand 复制失败');
+        }
+      }
       if (type === 'wealth') {
         setWealthCopied(true);
         setTimeout(() => setWealthCopied(false), 2000);
@@ -100,6 +122,7 @@ ${type === 'wealth' ? '必须生成 wealthYearlyData 数组，包含 100 条数�
       }
     } catch (err) {
       console.error('复制失败', err);
+      alert('复制失败，请手动选择文本复制');
     }
   };
 

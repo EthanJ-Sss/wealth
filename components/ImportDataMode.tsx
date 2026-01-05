@@ -1,10 +1,12 @@
 
 import React, { useState } from 'react';
 import { LifeDestinyResult } from '../types';
-import { Copy, CheckCircle, AlertCircle, Upload, Sparkles, MessageSquare, ArrowRight } from 'lucide-react';
+import { Copy, CheckCircle, AlertCircle, Upload, Sparkles, MessageSquare, ArrowRight, Loader2, Zap } from 'lucide-react';
 import { BAZI_SYSTEM_INSTRUCTION } from '../constants';
 import AutoPaipanForm from './AutoPaipanForm';
 import { PaipanResult } from '../services/paipanService';
+import { generateMainAnalysis } from '../services/apiService';
+import GeneratingModal from './GeneratingModal';
 
 interface ImportDataModeProps {
     onDataImport: (data: LifeDestinyResult) => void;
@@ -27,6 +29,8 @@ const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
     const [jsonInput, setJsonInput] = useState('');
     const [copied, setCopied] = useState(false);
     const [error, setError] = useState<string | null>(null);
+    const [isGenerating, setIsGenerating] = useState(false);
+    const [generateError, setGenerateError] = useState<string | null>(null);
 
     // 自动排盘结果回调
     const handlePaipanResult = (result: PaipanResult) => {
@@ -250,6 +254,74 @@ const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
         }
     };
 
+    // 一键生成 - 调用后端 API
+    const handleAutoGenerate = async () => {
+        if (!isStep1Valid) return;
+        
+        setIsGenerating(true);
+        setGenerateError(null);
+        
+        try {
+            const result = await generateMainAnalysis({
+                name: baziInfo.name,
+                gender: baziInfo.gender as 'Male' | 'Female',
+                birthYear: baziInfo.birthYear,
+                yearPillar: baziInfo.yearPillar,
+                monthPillar: baziInfo.monthPillar,
+                dayPillar: baziInfo.dayPillar,
+                hourPillar: baziInfo.hourPillar,
+                startAge: baziInfo.startAge,
+                firstDaYun: baziInfo.firstDaYun,
+            });
+            
+            if (result.success && result.data) {
+                // 转换数据格式
+                const importedResult: LifeDestinyResult = {
+                    chartData: result.data.chartPoints,
+                    analysis: {
+                        bazi: result.data.bazi || [],
+                        summary: result.data.summary || "无摘要",
+                        summaryScore: result.data.summaryScore || 5,
+                        personality: result.data.personality || "无性格分析",
+                        personalityScore: result.data.personalityScore || 5,
+                        industry: result.data.industry || "无",
+                        industryScore: result.data.industryScore || 5,
+                        fengShui: result.data.fengShui || "建议多亲近自然，保持心境平和。",
+                        fengShuiScore: result.data.fengShuiScore || 5,
+                        wealth: result.data.wealth || "无",
+                        wealthScore: result.data.wealthScore || 5,
+                        marriage: result.data.marriage || "无",
+                        marriageScore: result.data.marriageScore || 5,
+                        health: result.data.health || "无",
+                        healthScore: result.data.healthScore || 5,
+                        family: result.data.family || "无",
+                        familyScore: result.data.familyScore || 5,
+                        geJu: result.data.geJu || "格局待分析",
+                        geJuScore: result.data.geJuScore || 5,
+                        yongShen: result.data.yongShen || "用神待分析",
+                        yongShenScore: result.data.yongShenScore || 5,
+                        shenSha: result.data.shenSha || "神煞待分析",
+                        shenShaScore: result.data.shenShaScore || 5,
+                        liuNian: result.data.liuNian || "流年运势待分析",
+                        liuNianScore: result.data.liuNianScore || 5,
+                        kaiYun: result.data.kaiYun || "开运建议待生成",
+                        kaiYunScore: result.data.kaiYunScore || 5,
+                        wealthAnalysis: result.data.wealthAnalysis,
+                        loveAnalysis: result.data.loveAnalysis,
+                    },
+                };
+                onDataImport(importedResult);
+            } else {
+                setGenerateError(result.error || '生成失败，请稍后重试');
+            }
+        } catch (error: any) {
+            console.error('生成失败:', error);
+            setGenerateError(error.message || '生成失败，请稍后重试');
+        } finally {
+            setIsGenerating(false);
+        }
+    };
+
     const handleBaziChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         setBaziInfo(prev => ({ ...prev, [e.target.name]: e.target.value }));
     };
@@ -410,12 +482,45 @@ const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
                         </p>
                     </div>
 
+                    {/* 一键生成按钮 */}
+                    <button
+                        onClick={handleAutoGenerate}
+                        disabled={!isStep1Valid || isGenerating}
+                        className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 mb-3"
+                    >
+                        {isGenerating ? (
+                            <>
+                                <Loader2 className="w-5 h-5 animate-spin" />
+                                正在生成...
+                            </>
+                        ) : (
+                            <>
+                                <Zap className="w-5 h-5" />
+                                ✨ 一键生成命理分析
+                            </>
+                        )}
+                    </button>
+
+                    {generateError && (
+                        <div className="flex items-center gap-2 text-red-600 bg-red-50 px-4 py-3 rounded-lg border border-red-200 mb-3">
+                            <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                            <p className="text-sm">{generateError}</p>
+                        </div>
+                    )}
+
+                    {/* 分隔线 */}
+                    <div className="flex items-center gap-4 my-4">
+                        <div className="flex-1 h-px bg-gray-200"></div>
+                        <span className="text-sm text-gray-400">或者手动复制 Prompt</span>
+                        <div className="flex-1 h-px bg-gray-200"></div>
+                    </div>
+
                     <button
                         onClick={() => setStep(2)}
                         disabled={!isStep1Valid}
-                        className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-bold py-3.5 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2"
+                        className="w-full bg-white hover:bg-gray-50 border-2 border-gray-300 disabled:border-gray-200 disabled:text-gray-400 text-gray-700 font-bold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2"
                     >
-                        下一步：生成提示词 <ArrowRight className="w-5 h-5" />
+                        手动模式：复制提示词 <ArrowRight className="w-5 h-5" />
                     </button>
                 </div>
             )}
@@ -538,6 +643,13 @@ const ImportDataMode: React.FC<ImportDataModeProps> = ({ onDataImport }) => {
                     </div>
                 </div>
             )}
+
+            {/* 生成中弹窗 */}
+            <GeneratingModal 
+                isOpen={isGenerating} 
+                title="正在生成命理分析"
+                message="AI 正在分析您的命盘，生成流年运势..."
+            />
         </div>
     );
 };

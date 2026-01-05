@@ -22,3 +22,19 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment files (contain sensitive API keys)
+.env
+.env.local
+.env.development
+.env.production
+server/.env
+
+# Database files
+*.db
+*.db-journal
+server/prisma/*.db
+server/prisma/*.db-journal
+
+# Server build output
+server/dist

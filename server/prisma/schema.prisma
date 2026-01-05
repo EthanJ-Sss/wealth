@@ -1,0 +1,82 @@
+// Prisma Schema - 人生K线账号系统
+// 使用 SQLite 方便本地开发，生产环境可换 MySQL/PostgreSQL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// 账号表
+model Account {
+  id            String   @id @default(uuid())
+  
+  // 认证信息
+  username      String   @unique  // 用户名（自动生成，如 LK2026010412345）
+  passwordHash  String   // 密码 bcrypt 哈希
+  passwordPlain String?  // 明文密码（仅发货时使用，发货后可清除）
+  
+  // 使用额度
+  remainingUses Int      @default(3)  // 剩余生成次数
+  totalUses     Int      @default(3)  // 总次数（用于统计）
+  
+  // 状态: unused(未使用), active(已激活), expired(次数用尽), disabled(已禁用)
+  status        String   @default("unused")
+  
+  // 时间戳
+  createdAt     DateTime @default(now())
+  firstLoginAt  DateTime?  // 首次登录时间
+  lastLoginAt   DateTime?  // 最后登录时间
+  expiresAt     DateTime?  // 过期时间（可选）
+  
+  // 订单关联
+  orderId       String?    // 电商平台订单号
+  platform      String?    // 来源平台（taobao/xianyu/xiaohongshu）
+  buyerId       String?    // 买家ID（用于退款回收）
+  
+  // 关联的使用记录
+  usageLogs     UsageLog[]
+  
+  @@index([status])
+  @@index([orderId])
+  @@index([platform])
+}
+
+// 使用记录表
+model UsageLog {
+  id          Int      @id @default(autoincrement())
+  accountId   String
+  account     Account  @relation(fields: [accountId], references: [id])
+  
+  // 操作类型
+  actionType  String   // login, logout, generate_main, generate_wealth, generate_love, export
+  
+  // 次数变化
+  usesBefore  Int?     // 操作前次数
+  usesAfter   Int?     // 操作后次数
+  usesConsumed Int     @default(0)  // 本次消耗次数
+  
+  // 客户端信息
+  ipAddress   String?
+  userAgent   String?
+  
+  // 额外数据（JSON 字符串）
+  extraData   String?
+  
+  // 时间
+  createdAt   DateTime @default(now())
+  
+  @@index([accountId])
+  @@index([actionType])
+  @@index([createdAt])
+}
+
+// 账号序列号（用于生成唯一用户名）
+model AccountSequence {
+  id        Int      @id @default(autoincrement())
+  date      String   @unique  // 日期 YYYYMMDD
+  sequence  Int      @default(0)  // 当日序号
+}

@@ -3,6 +3,8 @@ import { WealthAnalysis, LoveAnalysis, AnalysisData } from '../types';
 import { WEALTH_ANALYSIS_SYSTEM_INSTRUCTION, LOVE_ANALYSIS_SYSTEM_INSTRUCTION } from '../constants';
 import WealthAnalysisPanel from './WealthAnalysisPanel';
 import LoveAnalysisPanel from './LoveAnalysisPanel';
+import { generateWealthAnalysis, generateLoveAnalysis } from '../services/apiService';
+import GeneratingModal from './GeneratingModal';
 import {
   Coins,
   Heart,
@@ -17,7 +19,9 @@ import {
   Lock,
   Unlock,
   MessageSquare,
-  X
+  X,
+  Loader2,
+  Zap
 } from 'lucide-react';
 
 interface DeepAnalysisPanelProps {
@@ -51,6 +55,10 @@ const DeepAnalysisPanel: React.FC<DeepAnalysisPanelProps> = ({
   const [loveCopied, setLoveCopied] = useState(false);
   const [loveJsonInput, setLoveJsonInput] = useState('');
   const [loveError, setLoveError] = useState<string | null>(null);
+
+  // 一键生成状态
+  const [isGeneratingWealth, setIsGeneratingWealth] = useState(false);
+  const [isGeneratingLove, setIsGeneratingLove] = useState(false);
 
   // 生成用户提示词
   const generateUserPrompt = (type: AnalysisType) => {
@@ -229,6 +237,102 @@ ${type === 'wealth' ? '必须生成 wealthYearlyData 数组，包含 100 条数�
     }
   };
 
+  // 一键生成财富分析
+  const handleAutoGenerateWealth = async () => {
+    setIsGeneratingWealth(true);
+    setWealthError(null);
+    
+    try {
+      const result = await generateWealthAnalysis({
+        bazi: analysis.bazi,
+        birthYear,
+        summary: analysis.summary,
+        geJu: analysis.geJu,
+        yongShen: analysis.yongShen,
+      });
+      
+      if (result.success && result.data) {
+        const wealthData = result.data;
+        const wealthAnalysis: WealthAnalysis = {
+          wealthStar: wealthData.wealthStar || '待分析',
+          wealthStarScore: wealthData.wealthStarScore || 5,
+          wealthMethod: wealthData.wealthMethod || '待分析',
+          wealthMethodScore: wealthData.wealthMethodScore || 5,
+          wealthCycle: wealthData.wealthCycle || [],
+          wealthRisk: wealthData.wealthRisk || '待分析',
+          wealthRiskLevel: wealthData.wealthRiskLevel || 'medium',
+          wealthInvest: wealthData.wealthInvest || '待分析',
+          wealthInvestType: wealthData.wealthInvestType || 'balanced',
+          wealthNoble: wealthData.wealthNoble || '待分析',
+          wealthNobleDirection: wealthData.wealthNobleDirection || '东方',
+          wealthCeiling: wealthData.wealthCeiling || '待分析',
+          wealthCeilingLevel: wealthData.wealthCeilingLevel || 'medium',
+          wealthAdvice: wealthData.wealthAdvice || '待分析',
+          wealthYearlyData: wealthData.wealthYearlyData || [],
+        };
+        onWealthAnalysisUpdate(wealthAnalysis);
+        setWealthStep('result');
+      } else {
+        setWealthError(result.error || '生成失败，请稍后重试');
+      }
+    } catch (error: any) {
+      console.error('财富分析生成失败:', error);
+      setWealthError(error.message || '生成失败，请稍后重试');
+    } finally {
+      setIsGeneratingWealth(false);
+    }
+  };
+
+  // 一键生成桃花分析
+  const handleAutoGenerateLove = async () => {
+    setIsGeneratingLove(true);
+    setLoveError(null);
+    
+    try {
+      const result = await generateLoveAnalysis({
+        bazi: analysis.bazi,
+        birthYear,
+        summary: analysis.summary,
+        geJu: analysis.geJu,
+        yongShen: analysis.yongShen,
+      });
+      
+      if (result.success && result.data) {
+        const loveData = result.data;
+        const loveAnalysis: LoveAnalysis = {
+          loveStar: loveData.loveStar || '待分析',
+          loveStarScore: loveData.loveStarScore || 5,
+          spouseType: loveData.spouseType || '待分析',
+          spouseTypeScore: loveData.spouseTypeScore || 5,
+          lovePattern: loveData.lovePattern || '待分析',
+          lovePatternType: loveData.lovePatternType || 'normal',
+          loveCycle: loveData.loveCycle || [],
+          loveRisk: loveData.loveRisk || '待分析',
+          loveRiskLevel: loveData.loveRiskLevel || 'medium',
+          loveNoble: loveData.loveNoble || '待分析',
+          loveNobleDirection: loveData.loveNobleDirection || '东方',
+          bestMatch: loveData.bestMatch || '待分析',
+          avoidMatch: loveData.avoidMatch || '待分析',
+          marriagePalace: loveData.marriagePalace || '待分析',
+          marriagePalaceScore: loveData.marriagePalaceScore || 5,
+          childrenFortune: loveData.childrenFortune || '待分析',
+          childrenFortuneScore: loveData.childrenFortuneScore || 5,
+          loveAdvice: loveData.loveAdvice || '待分析',
+          loveYearlyData: loveData.loveYearlyData || [],
+        };
+        onLoveAnalysisUpdate(loveAnalysis);
+        setLoveStep('result');
+      } else {
+        setLoveError(result.error || '生成失败，请稍后重试');
+      }
+    } catch (error: any) {
+      console.error('桃花分析生成失败:', error);
+      setLoveError(error.message || '生成失败，请稍后重试');
+    } finally {
+      setIsGeneratingLove(false);
+    }
+  };
+
   // 入口卡片组件
   const EntryCard = ({ 
     type, 
@@ -237,6 +341,8 @@ ${type === 'wealth' ? '必须生成 wealthYearlyData 数组，包含 100 条数�
     icon: Icon, 
     gradient, 
     onClick,
+    onAutoGenerate,
+    isGenerating,
     isLocked 
   }: { 
     type: AnalysisType;
@@ -245,50 +351,60 @@ ${type === 'wealth' ? '必须生成 wealthYearlyData 数组，包含 100 条数�
     icon: React.ElementType; 
     gradient: string;
     onClick: () => void;
+    onAutoGenerate: () => void;
+    isGenerating: boolean;
     isLocked: boolean;
   }) => (
-    <div 
-      className={`relative overflow-hidden rounded-2xl border-2 transition-all duration-300 cursor-pointer group
-        ${isLocked 
-          ? 'border-gray-200 bg-gray-50 hover:border-gray-300' 
-          : `border-transparent ${gradient} hover:scale-[1.02] hover:shadow-xl`
-        }`}
-      onClick={onClick}
-    >
+    <div className={`relative overflow-hidden rounded-2xl border-2 transition-all duration-300 ${gradient}`}>
       <div className="p-6 md:p-8">
-        <div className="flex items-center gap-4">
-          <div className={`p-4 rounded-2xl shadow-lg ${
-            isLocked ? 'bg-gray-200' : 'bg-white/20 backdrop-blur-sm'
-          }`}>
-            <Icon className={`w-8 h-8 ${isLocked ? 'text-gray-400' : 'text-white'}`} />
+        <div className="flex items-center gap-4 mb-6">
+          <div className="p-4 rounded-2xl shadow-lg bg-white/20 backdrop-blur-sm">
+            <Icon className="w-8 h-8 text-white" />
           </div>
           <div className="flex-1">
-            <h3 className={`text-xl md:text-2xl font-bold font-serif-sc ${
-              isLocked ? 'text-gray-500' : 'text-white'
-            }`}>
+            <h3 className="text-xl md:text-2xl font-bold font-serif-sc text-white">
               {title}
             </h3>
-            <p className={`text-sm ${isLocked ? 'text-gray-400' : 'text-white/80'}`}>
+            <p className="text-sm text-white/80">
               {subtitle}
             </p>
           </div>
-          <div className={`p-3 rounded-full transition-transform group-hover:translate-x-1 ${
-            isLocked ? 'bg-gray-100' : 'bg-white/20'
-          }`}>
-            {isLocked ? (
-              <Lock className={`w-5 h-5 ${isLocked ? 'text-gray-400' : 'text-white'}`} />
-            ) : (
-              <ArrowRight className="w-5 h-5 text-white" />
-            )}
-          </div>
         </div>
         
-        {!isLocked && (
-          <div className="mt-4 flex items-center gap-2 text-white/70 text-sm">
-            <Sparkles className="w-4 h-4" />
-            <span>点击开始生成深度分析</span>
-          </div>
-        )}
+        {/* 一键生成按钮 */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onAutoGenerate();
+          }}
+          disabled={isGenerating}
+          className="w-full bg-white hover:bg-gray-50 disabled:bg-gray-100 text-gray-800 font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 mb-3"
+        >
+          {isGenerating ? (
+            <>
+              <Loader2 className="w-5 h-5 animate-spin text-gray-500" />
+              <span className="text-gray-500">正在生成...</span>
+            </>
+          ) : (
+            <>
+              <Zap className="w-5 h-5 text-amber-500" />
+              ✨ 一键生成分析
+            </>
+          )}
+        </button>
+
+        {/* 手动模式入口 */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onClick();
+          }}
+          disabled={isGenerating}
+          className="w-full bg-white/20 hover:bg-white/30 disabled:opacity-50 text-white font-medium py-2.5 rounded-lg transition-all flex items-center justify-center gap-2 text-sm"
+        >
+          <Copy className="w-4 h-4" />
+          手动模式：复制 Prompt
+        </button>
       </div>
     </div>
   );
@@ -427,6 +543,8 @@ ${type === 'wealth' ? '必须生成 wealthYearlyData 数组，包含 100 条数�
           icon={Coins}
           gradient="bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500"
           onClick={() => setWealthStep('generate')}
+          onAutoGenerate={handleAutoGenerateWealth}
+          isGenerating={isGeneratingWealth}
           isLocked={false}
         />
       )}
@@ -459,6 +577,8 @@ ${type === 'wealth' ? '必须生成 wealthYearlyData 数组，包含 100 条数�
           icon={Heart}
           gradient="bg-gradient-to-r from-pink-500 via-rose-500 to-red-500"
           onClick={() => setLoveStep('generate')}
+          onAutoGenerate={handleAutoGenerateLove}
+          isGenerating={isGeneratingLove}
           isLocked={false}
         />
       )}
@@ -481,6 +601,18 @@ ${type === 'wealth' ? '必须生成 wealthYearlyData 数组，包含 100 条数�
       {loveStep === 'result' && analysis.loveAnalysis && (
         <LoveAnalysisPanel loveAnalysis={analysis.loveAnalysis} />
       )}
+
+      {/* 生成中弹窗 */}
+      <GeneratingModal 
+        isOpen={isGeneratingWealth} 
+        title="正在生成财富分析"
+        message="AI 正在分析您的财运，生成详细报告..."
+      />
+      <GeneratingModal 
+        isOpen={isGeneratingLove} 
+        title="正在生成桃花分析"
+        message="AI 正在分析您的姻缘，生成详细报告..."
+      />
     </div>
   );
 };

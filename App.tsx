@@ -4,19 +4,34 @@ import LifeKLineChart from './components/LifeKLineChart';
 import AnalysisResult from './components/AnalysisResult';
 import ImportDataMode from './components/ImportDataMode';
 import DeepAnalysisPanel from './components/DeepAnalysisPanel';
+import UsageCounter from './components/UsageCounter';
+import { useAuth } from './contexts/AuthContext';
 import { LifeDestinyResult, WealthAnalysis, LoveAnalysis } from './types';
 import { Sparkles, AlertCircle, Download, Printer, Trophy, FileDown, FileUp } from 'lucide-react';
 
 const App: React.FC = () => {
+  const { user, refreshUser } = useAuth();
   const [result, setResult] = useState<LifeDestinyResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [userName, setUserName] = useState<string>('');
 
+  // 检查是否有足够的生成次数
+  const canGenerate = user ? user.remainingUses > 0 : false;
+
   // 处理导入数据
   const handleDataImport = (data: LifeDestinyResult) => {
+    // 检查次数
+    if (!canGenerate) {
+      setError('生成次数已用完，请续购');
+      return;
+    }
+    
     setResult(data);
     setUserName('');
     setError(null);
+    
+    // 刷新用户信息（获取最新次数）
+    refreshUser();
   };
 
   // 更新财富深度分析数据
@@ -316,7 +331,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center">
       {/* Header */}
-      <header className="w-full bg-white border-b border-gray-200 py-6 sticky top-0 z-50 no-print">
+      <header className="w-full bg-white border-b border-gray-200 py-4 sticky top-0 z-50 no-print">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="bg-black text-white p-2 rounded-lg">
@@ -327,10 +342,9 @@ const App: React.FC = () => {
               <p className="text-xs text-gray-500 uppercase tracking-widest">Life Destiny K-Line</p>
             </div>
           </div>
-          <div className="flex items-center gap-2 text-sm text-gray-500 font-medium bg-gray-100 px-3 py-1.5 rounded-full">
-            <Sparkles className="w-4 h-4 text-amber-500" />
-            基于 AI 大模型驱动
-          </div>
+          
+          {/* 次数显示和用户信息 */}
+          <UsageCounter />
         </div>
       </header>
 
@@ -373,8 +387,20 @@ const App: React.FC = () => {
               </label>
             </div>
 
+            {/* 次数不足警告 */}
+            {!canGenerate && (
+              <div className="w-full max-w-lg bg-red-50 border border-red-200 rounded-xl p-4 text-center">
+                <p className="text-red-700 font-medium">
+                  ⚠️ 您的生成次数已用完
+                </p>
+                <p className="text-red-600 text-sm mt-1">
+                  请前往电商平台续购后继续使用
+                </p>
+              </div>
+            )}
+
             {/* 导入模式组件 */}
-            <ImportDataMode onDataImport={handleDataImport} />
+            {canGenerate && <ImportDataMode onDataImport={handleDataImport} />}
 
             {error && (
               <div className="flex items-center gap-2 text-red-600 bg-red-50 px-4 py-3 rounded-lg border border-red-100 max-w-md w-full animate-bounce-short">
